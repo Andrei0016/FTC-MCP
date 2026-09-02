@@ -7,7 +7,7 @@ from pathlib import Path
 from mcp.server.fastmcp import FastMCP
 
 from . import config
-from .tools import changelog, mapping, project, subsystem
+from .tools import changelog, mapping, project, sdk, subsystem
 
 _PKG = Path(__file__).parent
 _GUIDES = _PKG / "guides"
@@ -54,6 +54,24 @@ def project_map() -> str:
         "No map/MAP.md found from the current directory. Run create_ftc_project to "
         "scaffold one, or update_map inside an existing project."
     )
+
+
+@mcp.resource("ftc://sdk")
+def sdk_index() -> str:
+    """Overview of the decompiled SDK reference (ftc-sdk, pedro-pathing, panels)."""
+    return sdk.list_libs()
+
+
+@mcp.resource("ftc://sdk/{lib}")
+def sdk_lib_index(lib: str) -> str:
+    """Per-library API index: every team-facing type, grouped by package."""
+    return sdk.lib_index(lib)
+
+
+@mcp.resource("ftc://sdk/{lib}/{package}")
+def sdk_package(lib: str, package: str) -> str:
+    """Exact signatures (javap -protected) for every type in one package."""
+    return sdk.package_digest(lib, package)
 
 
 @mcp.resource("ftc://config")
@@ -125,6 +143,21 @@ def log_change(
     return changelog.log_change(
         project_dir, prompt, response, changes, title or None, map_updated
     )
+
+
+@mcp.tool()
+def sdk_search(query: str, lib: str = "") -> str:
+    """Search the decompiled SDK reference for a class or method by substring
+    (case-insensitive). Returns matching signature lines with their type + package.
+    lib filters to one of: ftc-sdk, pedro-pathing, panels."""
+    return sdk.search(query, lib)
+
+
+@mcp.tool()
+def sdk_class(fqcn: str) -> str:
+    """Return the full exact signature block for one type (fully-qualified or simple
+    name), plus a pointer to its decompiled source if generated locally."""
+    return sdk.class_block(fqcn)
 
 
 # ── prompts ────────────────────────────────────────────────────────────────

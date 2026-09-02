@@ -1,0 +1,4093 @@
+{
+ "com.qualcomm.hardware.HardwareDeviceManager": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DeviceManager"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware"
+ },
+ "com.qualcomm.hardware.HardwareFactory": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware"
+ },
+ "com.qualcomm.hardware.HardwareManualControlOpMode": {
+  "extends": "com.qualcomm.robotcore.eventloop.opmode.LinearOpMode",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware"
+ },
+ "com.qualcomm.hardware.adafruit.AdafruitBNO055IMU": {
+  "extends": "com.qualcomm.hardware.bosch.BNO055IMUImpl",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.adafruit"
+ },
+ "com.qualcomm.hardware.adafruit.AdafruitBNO055IMUNew": {
+  "extends": "com.qualcomm.hardware.bosch.BNO055IMUNew",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.adafruit"
+ },
+ "com.qualcomm.hardware.adafruit.AdafruitI2cColorSensor": {
+  "extends": "com.qualcomm.hardware.ams.AMSColorSensorImpl",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.adafruit"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.ColorSensor,com.qualcomm.robotcore.hardware.NormalizedColorSensor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Config": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Config>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Enable": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Enable>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Gain": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Gain>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$LEDDrive": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$LEDDrive>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Parameters": {
+  "extends": null,
+  "implements": [
+   "java.lang.Cloneable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Pers": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Pers>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Status": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Status>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensor$Wait": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.ams.AMSColorSensor$Wait>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.ams.AMSColorSensorImpl": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple, com.qualcomm.hardware.ams.AMSColorSensor$Parameters>",
+  "implements": [
+   "com.qualcomm.hardware.ams.AMSColorSensor",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig",
+   "com.qualcomm.robotcore.hardware.Light"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.ams"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkColorSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.ColorRangeSensor",
+   "com.qualcomm.robotcore.hardware.DistanceSensor",
+   "com.qualcomm.robotcore.hardware.ColorSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkColorSensor$ProximityGain": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.andymark.AndyMarkColorSensor$ProximityGain>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkColorSensor$ProximityPulseLength": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.andymark.AndyMarkColorSensor$ProximityPulseLength>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkIMU": {
+  "extends": "com.qualcomm.hardware.bosch.BNO055IMUNew",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkIMUOrientationOnRobot": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.ImuOrientationOnRobot"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkIMUOrientationOnRobot$I2cPortFacingDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.andymark.AndyMarkIMUOrientationOnRobot$I2cPortFacingDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkIMUOrientationOnRobot$LogoFacingDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.andymark.AndyMarkIMUOrientationOnRobot$LogoFacingDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.andymark.AndyMarkTOF": {
+  "extends": "com.qualcomm.hardware.stmicroelectronics.VL53L0X",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.andymark"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple, com.qualcomm.robotcore.hardware.IMU$Parameters>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.IMU"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$BootStatusFlag": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$BootStatusFlag>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$CommandError": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$CommandError>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$CommandFailureException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$CommandType": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$CommandType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$Fifo": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$Fifo>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$HostInterfaceControlFlag": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$HostInterfaceControlFlag>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$InitException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$InterruptStatusFlag": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$InterruptStatusFlag>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$NonSensorEventType": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$NonSensorEventType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$Sensor": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$Sensor>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$StatusAndDebugFifoMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BHI260IMU$StatusAndDebugFifoMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$StatusAndDebugFifoModeManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BHI260IMU$StatusPacket": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$AccelBandwidth": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$AccelBandwidth>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$AccelPowerMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$AccelPowerMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$AccelRange": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$AccelRange>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$AccelUnit": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$AccelUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$AccelerationIntegrator": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$AngleUnit": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$AngleUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$CalibrationData": {
+  "extends": null,
+  "implements": [
+   "java.lang.Cloneable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$CalibrationStatus": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$GyroBandwidth": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$GyroBandwidth>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$GyroPowerMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$GyroPowerMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$GyroRange": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$GyroRange>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$MagOpMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$MagOpMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$MagPowerMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$MagPowerMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$MagRate": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$MagRate>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$Parameters": {
+  "extends": null,
+  "implements": [
+   "java.lang.Cloneable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$PitchMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$PitchMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$SensorMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$SensorMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$SystemError": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$SystemError>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$SystemStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$SystemStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMU$TempUnit": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMU$TempUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUImpl": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters<com.qualcomm.robotcore.hardware.I2cDeviceSynch, com.qualcomm.hardware.bosch.BNO055IMU$Parameters>",
+  "implements": [
+   "com.qualcomm.hardware.bosch.BNO055IMU",
+   "com.qualcomm.robotcore.hardware.Gyroscope",
+   "com.qualcomm.robotcore.hardware.IntegratingGyroscope",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig",
+   "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier$Notifications"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUImpl$AccelerationManager": {
+  "extends": null,
+  "implements": [
+   "java.lang.Runnable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUImpl$ImuNotInitializedException": {
+  "extends": "java.lang.RuntimeException",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUImpl$POWER_MODE": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMUImpl$POWER_MODE>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUImpl$VECTOR": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.bosch.BNO055IMUImpl$VECTOR>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUImpl$VectorData": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUNew": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple, com.qualcomm.robotcore.hardware.IMU$Parameters>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.IMU"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055IMUNew$Parameters": {
+  "extends": "com.qualcomm.robotcore.hardware.IMU$Parameters",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055Util": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.BNO055Util$InitException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.JustLoggingAccelerationIntegrator": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.bosch.BNO055IMU$AccelerationIntegrator"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.bosch.NaiveAccelerationIntegrator": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.bosch.BNO055IMU$AccelerationIntegrator"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.bosch"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.ColorSensor,com.qualcomm.robotcore.hardware.NormalizedColorSensor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$Gain": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$Gain>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$LEDCurrent": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$LEDCurrent>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$LEDPulseModulation": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$LEDPulseModulation>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$LSMeasurementRate": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$LSMeasurementRate>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$LSResolution": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$LSResolution>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$MainControl": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$MainControl>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$MainStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$MainStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$PSMeasurementRate": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$PSMeasurementRate>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$PSResolution": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$PSResolution>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$Parameters": {
+  "extends": null,
+  "implements": [
+   "java.lang.Cloneable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensor$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.broadcom.BroadcomColorSensor$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.broadcom.BroadcomColorSensorImpl": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple, com.qualcomm.hardware.broadcom.BroadcomColorSensor$Parameters>",
+  "implements": [
+   "com.qualcomm.hardware.broadcom.BroadcomColorSensor",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig",
+   "com.qualcomm.robotcore.hardware.Light"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.broadcom"
+ },
+ "com.qualcomm.hardware.dfrobot.HuskyLens": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.dfrobot"
+ },
+ "com.qualcomm.hardware.dfrobot.HuskyLens$Algorithm": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.dfrobot.HuskyLens$Algorithm>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.dfrobot"
+ },
+ "com.qualcomm.hardware.dfrobot.HuskyLens$Arrow": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.dfrobot"
+ },
+ "com.qualcomm.hardware.dfrobot.HuskyLens$Block": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.dfrobot"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$CachingMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuad$CachingMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$ChannelBankConfig": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuad$ChannelBankConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$ChannelPulseWidthParams": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$EncoderDataBlock": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$EncoderDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuad$EncoderDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$FirmwareVersion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$I2cRecoveryMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuad$I2cRecoveryMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$LocalizerDataBlock": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$LocalizerStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuad$LocalizerStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuad$LocalizerYawAxis": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuad$LocalizerYawAxis>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuadImpl": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple>",
+  "implements": [
+   "com.qualcomm.hardware.digitalchickenlabs.OctoQuad"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuadImpl$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuadImpl$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.digitalchickenlabs.OctoQuadImpl$RegisterType": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.digitalchickenlabs.OctoQuadImpl$RegisterType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.digitalchickenlabs"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$DeviceControl": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$DeviceControl>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$DeviceStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$DeviceStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$EncoderDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$EncoderDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$ErrorDetectionType": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$ErrorDetectionType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$GoBildaOdometryPods": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$GoBildaOdometryPods>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$ReadData": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$ReadData>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$RegisterType": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.gobilda.GoBildaPinpointDriver$RegisterType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.gobilda"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters<com.qualcomm.robotcore.hardware.I2cDeviceSynch, com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$Parameters>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.Gyroscope",
+   "com.qualcomm.robotcore.hardware.IntegratingGyroscope",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$CalibrationStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$CalibrationStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$IntegrationControl": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$IntegrationControl>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$OpStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$OpStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$Parameters": {
+  "extends": null,
+  "implements": [
+   "java.lang.Cloneable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$SelfTestStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$SelfTestStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$SensorStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.kauailabs.NavxMicroNavigationSensor$SensorStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.kauailabs"
+ },
+ "com.qualcomm.hardware.limelightvision.LLFieldMap": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLFieldMap$Fiducial": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes$BarcodeResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes$CalibrationResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes$ClassifierResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes$ColorResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes$DetectorResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLResultTypes$FiducialResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.LLStatus": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.limelightvision.Limelight3A": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.HardwareDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.limelightvision"
+ },
+ "com.qualcomm.hardware.lynx.LynxAnalogInputController": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.AnalogInputController"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxCommExceptionHandler": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxController": {
+  "extends": "com.qualcomm.hardware.lynx.LynxCommExceptionHandler",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.RobotCoreLynxController",
+   "com.qualcomm.robotcore.hardware.Engagable",
+   "com.qualcomm.robotcore.hardware.HardwareDeviceHealth",
+   "com.qualcomm.robotcore.hardware.usb.RobotArmingStateNotifier$Callback",
+   "com.qualcomm.robotcore.hardware.usb.RobotArmingStateNotifier"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxController$PretendLynxModule": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.lynx.LynxModuleIntf"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxDcMotorController": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DcMotorController",
+   "com.qualcomm.robotcore.hardware.DcMotorControllerEx"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxDcMotorController$MotorProperties": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxDigitalChannelController": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DigitalChannelController"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxDigitalChannelController$PinProperties": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxEmbeddedBNO055IMUNew": {
+  "extends": "com.qualcomm.hardware.bosch.BNO055IMUNew",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxEmbeddedIMU": {
+  "extends": "com.qualcomm.hardware.bosch.BNO055IMUImpl",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxFirmwareUpdater": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxI2cColorRangeSensor": {
+  "extends": "com.qualcomm.hardware.ams.AMSColorSensorImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DistanceSensor",
+   "com.qualcomm.robotcore.hardware.OpticalDistanceSensor",
+   "com.qualcomm.robotcore.hardware.ColorRangeSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxI2cDeviceSynch": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple",
+   "com.qualcomm.robotcore.hardware.I2cDeviceSynchReadHistory"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$BusSpeed": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.lynx.LynxI2cDeviceSynch$BusSpeed>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV1": {
+  "extends": "com.qualcomm.hardware.lynx.LynxI2cDeviceSynch",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxI2cDeviceSynchV2": {
+  "extends": "com.qualcomm.hardware.lynx.LynxI2cDeviceSynch",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule": {
+  "extends": "com.qualcomm.hardware.lynx.LynxCommExceptionHandler",
+  "implements": [
+   "com.qualcomm.hardware.lynx.LynxModuleIntf",
+   "com.qualcomm.robotcore.hardware.usb.RobotArmingStateNotifier",
+   "com.qualcomm.robotcore.hardware.usb.RobotArmingStateNotifier$Callback",
+   "com.qualcomm.robotcore.hardware.Blinker",
+   "com.qualcomm.robotcore.hardware.VisuallyIdentifiableHardwareDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$BlinkerPolicy": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$BreathingBlinkerPolicy": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.lynx.LynxModule$BlinkerPolicy"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$BulkCachingMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.lynx.LynxModule$BulkCachingMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$BulkData": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$CountModuleAddressBlinkerPolicy": {
+  "extends": "com.qualcomm.hardware.lynx.LynxModule$BreathingBlinkerPolicy",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$DebugGroup": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.lynx.LynxModule$DebugGroup>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$DebugVerbosity": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.lynx.LynxModule$DebugVerbosity>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModule$MessageClassAndCtor": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleIntf": {
+  "extends": "com.qualcomm.robotcore.hardware.RobotCoreLynxModule,com.qualcomm.robotcore.hardware.HardwareDevice,com.qualcomm.robotcore.hardware.Engagable",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleWarningManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleWarningManager$ConditionStatus": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleWarningManager$LowBatteryStatus": {
+  "extends": "com.qualcomm.hardware.lynx.LynxModuleWarningManager$ConditionStatus",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleWarningManager$LynxModuleWarningSource": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.util.GlobalWarningSource"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleWarningManager$UnresponsiveStatus": {
+  "extends": "com.qualcomm.hardware.lynx.LynxModuleWarningManager$ConditionStatus",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxModuleWarningManager$WarningManagerOpModeListener": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier$Notifications"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxNackException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxPwmOutputController": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.PWMOutputController",
+   "com.qualcomm.robotcore.hardware.PWMOutputControllerEx"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxServoController": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.ServoController",
+   "com.qualcomm.robotcore.hardware.ServoControllerEx"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUnsupportedCommandException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbDevice": {
+  "extends": "com.qualcomm.robotcore.hardware.usb.RobotUsbModule,com.qualcomm.robotcore.util.GlobalWarningSource,com.qualcomm.robotcore.hardware.RobotCoreLynxUsbDevice,com.qualcomm.robotcore.hardware.HardwareDevice,com.qualcomm.robotcore.eventloop.SyncdDevice,com.qualcomm.robotcore.hardware.Engagable",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbDevice$SystemOperationHandle": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbDeviceDelegate": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.lynx.LynxUsbDevice",
+   "com.qualcomm.robotcore.hardware.HardwareDeviceCloseOnTearDown"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbDeviceImpl": {
+  "extends": "org.firstinspires.ftc.robotcore.internal.hardware.usb.ArmableUsbDevice",
+  "implements": [
+   "com.qualcomm.hardware.lynx.LynxUsbDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbDeviceImpl$IncomingDatagramPoller": {
+  "extends": null,
+  "implements": [
+   "java.lang.Runnable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbUtil": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxUsbUtil$Placeholder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.LynxVoltageSensor": {
+  "extends": "com.qualcomm.hardware.lynx.LynxController",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.VoltageSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.MessageKeyedLock": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.lynx.Supplier": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.lynx"
+ },
+ "com.qualcomm.hardware.maxbotix.MaxSonarI2CXL": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.maxbotix"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsAnalogOpticalDistanceSensor": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.OpticalDistanceSensor",
+   "com.qualcomm.robotcore.hardware.AnalogSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.ColorSensor",
+   "com.qualcomm.robotcore.hardware.NormalizedColorSensor",
+   "com.qualcomm.robotcore.hardware.SwitchableLight",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor$Command": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor$Command>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cColorSensor$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cCompassSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.CompassSensor",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cCompassSensor$Command": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cCompassSensor$Command>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cCompassSensor$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cCompassSensor$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.GyroSensor",
+   "com.qualcomm.robotcore.hardware.Gyroscope",
+   "com.qualcomm.robotcore.hardware.IntegratingGyroscope",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$Command": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$Command>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$HeadingMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$HeadingMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$MeasurementMode": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$MeasurementMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cGyro$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cIrSeekerSensorV3": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.IrSeekerSensor",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cIrSeekerSensorV3$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cIrSeekerSensorV3$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cRangeSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DistanceSensor",
+   "com.qualcomm.robotcore.hardware.OpticalDistanceSensor",
+   "com.qualcomm.robotcore.hardware.I2cAddrConfig"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cRangeSensor$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.ModernRoboticsI2cRangeSensor$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.ModernRoboticsTouchSensor": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.TouchSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram$AllocationContext": {
+  "extends": "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsReaderWriter": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsRequest": {
+  "extends": "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsResponse": {
+  "extends": "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsDatagram",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ModernRoboticsUsbUtil": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable": {
+  "extends": "java.lang.Runnable,com.qualcomm.robotcore.eventloop.SyncdDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable$BlockingState": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable$BlockingState>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable$Callback": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable$EmptyCallback": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable$Callback"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnableSegment": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnableStandard": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.hardware.modernrobotics.comm.ReadWriteRunnable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.modernrobotics.comm.RobotUsbDevicePretendModernRobotics": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.usb.RobotUsbDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.modernrobotics.comm"
+ },
+ "com.qualcomm.hardware.motors.GoBILDA5201Series": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.GoBILDA5202Series": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.Matrix12vMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.NeveRest20Gearmotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.NeveRest3_7GearmotorV1": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.NeveRest40Gearmotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.NeveRest60Gearmotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.RevRobotics20HdHexMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.RevRobotics40HdHexMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.RevRoboticsCoreHexMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.RevRoboticsHdHexMotor": {
+  "extends": "com.qualcomm.hardware.motors.RevRobotics40HdHexMotor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.RevRoboticsUltraPlanetaryHdHexMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.StudicaMaverickMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.motors.TetrixMotor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.motors"
+ },
+ "com.qualcomm.hardware.rev.Rev2mDistanceSensor": {
+  "extends": "com.qualcomm.hardware.stmicroelectronics.VL53L0X",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.Rev9AxisImu": {
+  "extends": "com.qualcomm.hardware.bosch.BNO055IMUNew",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.Rev9AxisImuOrientationOnRobot": {
+  "extends": "com.qualcomm.hardware.rev.RevImuOrientationOnRobot",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.Rev9AxisImuOrientationOnRobot$I2cPortFacingDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.rev.Rev9AxisImuOrientationOnRobot$I2cPortFacingDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.Rev9AxisImuOrientationOnRobot$LogoFacingDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.rev.Rev9AxisImuOrientationOnRobot$LogoFacingDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevBlinkinLedDriver": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.HardwareDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevBlinkinLedDriver$BlinkinPattern": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.rev.RevBlinkinLedDriver$BlinkinPattern>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevColorSensorV3": {
+  "extends": "com.qualcomm.hardware.broadcom.BroadcomColorSensorImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DistanceSensor",
+   "com.qualcomm.robotcore.hardware.OpticalDistanceSensor",
+   "com.qualcomm.robotcore.hardware.ColorRangeSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevHubOrientationOnRobot": {
+  "extends": "com.qualcomm.hardware.rev.RevImuOrientationOnRobot",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevHubOrientationOnRobot$LogoFacingDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.rev.RevHubOrientationOnRobot$LogoFacingDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevHubOrientationOnRobot$UsbFacingDirection": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.rev.RevHubOrientationOnRobot$UsbFacingDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevImuOrientationOnRobot": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.ImuOrientationOnRobot"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevSPARKMini": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.rev.RevTouchSensor": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.TouchSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.rev"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunLEDStick": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunLEDStick$Commands": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.sparkfun.SparkFunLEDStick$Commands>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunOTOS": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunOTOS$Pose2D": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunOTOS$SelfTestConfig": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunOTOS$SignalProcessConfig": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunOTOS$Status": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.sparkfun.SparkFunOTOS$Version": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.sparkfun"
+ },
+ "com.qualcomm.hardware.stmicroelectronics.VL53L0X": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<com.qualcomm.robotcore.hardware.I2cDeviceSynch>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DistanceSensor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.stmicroelectronics"
+ },
+ "com.qualcomm.hardware.stmicroelectronics.VL53L0X$Register": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.stmicroelectronics.VL53L0X$Register>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.stmicroelectronics"
+ },
+ "com.qualcomm.hardware.stmicroelectronics.VL53L0X$SequenceStepEnables": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.stmicroelectronics"
+ },
+ "com.qualcomm.hardware.stmicroelectronics.VL53L0X$SequenceStepTimeouts": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.stmicroelectronics"
+ },
+ "com.qualcomm.hardware.stmicroelectronics.VL53L0X$vcselPeriodType": {
+  "extends": "java.lang.Enum<com.qualcomm.hardware.stmicroelectronics.VL53L0X$vcselPeriodType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.hardware.stmicroelectronics"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.AnnotatedOpModeManager": {
+  "extends": "com.qualcomm.robotcore.eventloop.opmode.OpModeManager",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.AnnotatedOpModeRegistrar": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.Autonomous": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.Disabled": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.EventLoopManagerClient": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.FtcRobotControllerServiceState": {
+  "extends": "com.qualcomm.robotcore.eventloop.opmode.EventLoopManagerClient",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.LinearOpMode": {
+  "extends": "com.qualcomm.robotcore.eventloop.opmode.OpMode",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpMode": {
+  "extends": "com.qualcomm.robotcore.eventloop.opmode.OpModeInternal",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeInternal": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.robotcore.internal.opmode.OpModeServices",
+   "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$DefaultOpMode": {
+  "extends": "com.qualcomm.robotcore.eventloop.opmode.OpMode",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$ForceStopException": {
+  "extends": "java.lang.RuntimeException",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$OpModeState": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$OpModeState>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$OpModeStateTransition": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$OpModeStuckCodeMonitor": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerImpl$OpModeStuckCodeMonitor$Runner": {
+  "extends": null,
+  "implements": [
+   "java.lang.Runnable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier$Notifications": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeRegister": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.OpModeRegistrar": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.eventloop.opmode.TeleOp": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.eventloop.opmode"
+ },
+ "com.qualcomm.robotcore.exception.DuplicateNameException": {
+  "extends": "java.lang.RuntimeException",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.exception"
+ },
+ "com.qualcomm.robotcore.exception.RobotCoreException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.exception"
+ },
+ "com.qualcomm.robotcore.exception.RobotProtocolException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.exception"
+ },
+ "com.qualcomm.robotcore.exception.TargetPositionNotSetException": {
+  "extends": "java.lang.RuntimeException",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.exception"
+ },
+ "com.qualcomm.robotcore.hardware.AccelerationSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.AnalogInput": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.HardwareDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.AnalogInputController": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.AnalogSensor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Blinker": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Blinker$Step": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.CRServo": {
+  "extends": "com.qualcomm.robotcore.hardware.DcMotorSimple",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.CRServoImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.CRServo"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.CRServoImplEx": {
+  "extends": "com.qualcomm.robotcore.hardware.CRServoImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.PwmControl"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ColorRangeSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.ColorSensor,com.qualcomm.robotcore.hardware.NormalizedColorSensor,com.qualcomm.robotcore.hardware.DistanceSensor,com.qualcomm.robotcore.hardware.OpticalDistanceSensor,com.qualcomm.robotcore.hardware.LightSensor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ColorSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.CompassSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.CompassSensor$CompassMode": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.CompassSensor$CompassMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ControlSystem": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.ControlSystem>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotor": {
+  "extends": "com.qualcomm.robotcore.hardware.DcMotorSimple",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotor$RunMode": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.DcMotor$RunMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotor$ZeroPowerBehavior": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.DcMotor$ZeroPowerBehavior>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorController": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorControllerEx": {
+  "extends": "com.qualcomm.robotcore.hardware.DcMotorController",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorEx": {
+  "extends": "com.qualcomm.robotcore.hardware.DcMotor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DcMotor"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorImplEx": {
+  "extends": "com.qualcomm.robotcore.hardware.DcMotorImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DcMotorEx"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorSimple": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DcMotorSimple$Direction": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.DcMotorSimple$Direction>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DeviceManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DeviceManager$UsbDeviceType": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.DeviceManager$UsbDeviceType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DigitalChannel": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DigitalChannel$Mode": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.DigitalChannel$Mode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DigitalChannelController": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DigitalChannelController$Mode": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.DigitalChannelController$Mode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DigitalChannelImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.DigitalChannel"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.DistanceSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.EmbeddedControlHubModule": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Engagable": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad": {
+  "extends": "com.qualcomm.robotcore.robocol.RobocolParsableBase",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$LedEffect": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$LedEffect$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$LedEffect$Step": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$LegacyType": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.Gamepad$LegacyType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$RumbleEffect": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$RumbleEffect$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$RumbleEffect$Step": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gamepad$Type": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.Gamepad$Type>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.GamepadStateChanges": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.GamepadStateChanges$ButtonStateMonitor": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.GyroSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Gyroscope": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareDevice": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareDevice$Manufacturer": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.HardwareDevice$Manufacturer>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareDeviceCloseOnTearDown": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareDeviceHealth": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareDeviceHealth$HealthStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.HardwareDeviceHealth$HealthStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareDeviceHealthImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.HardwareDeviceHealth"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareMap": {
+  "extends": null,
+  "implements": [
+   "java.lang.Iterable<com.qualcomm.robotcore.hardware.HardwareDevice>"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareMap$DeviceInstanceHolder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareMap$DeviceInstancesFromSingleConfigEntry": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.HardwareMap$DeviceMapping": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice>",
+  "implements": [
+   "java.lang.Iterable<DEVICE_TYPE>"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cAddr": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cAddrConfig": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cAddressableDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cAddressableDevice": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDevice": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynch": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple,com.qualcomm.robotcore.hardware.Engagable",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynch$HeartbeatAction": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynch$ReadMode": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.I2cDeviceSynch$ReadMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynch$ReadWindow": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple>",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.usb.RobotArmingStateNotifier$Callback",
+   "com.qualcomm.robotcore.hardware.HardwareDevice"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynchDeviceWithParameters": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple, PARAMETERS> extends com.qualcomm.robotcore.hardware.I2cDeviceSynchDevice<DEVICE_CLIENT>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynchImplOnSimple": {
+  "extends": "com.qualcomm.robotcore.hardware.I2cDeviceSynchReadHistoryImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.I2cDeviceSynch"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynchReadHistory": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynchReadHistoryImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.I2cDeviceSynchReadHistory"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cDeviceSynchSimple": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice,com.qualcomm.robotcore.hardware.HardwareDeviceHealth,com.qualcomm.robotcore.hardware.I2cAddrConfig,com.qualcomm.robotcore.hardware.RobotConfigNameable",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cWaitControl": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.I2cWaitControl>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.I2cWarningManager": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.util.GlobalWarningSource"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.IMU": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.IMU$Parameters": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ImuOrientationOnRobot": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.IntegratingGyroscope": {
+  "extends": "com.qualcomm.robotcore.hardware.Gyroscope,com.qualcomm.robotcore.hardware.OrientationSensor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.IrSeekerSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.IrSeekerSensor$IrSeekerIndividualSensor": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.IrSeekerSensor$Mode": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.IrSeekerSensor$Mode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LED": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.HardwareDevice",
+   "com.qualcomm.robotcore.hardware.SwitchableLight"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Light": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LightBlinker": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.Blinker"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LightMultiplexor": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.SwitchableLight"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LightSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LynxModuleDescription": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LynxModuleDescription$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LynxModuleImuType": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.LynxModuleImuType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LynxModuleMeta": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.LynxModuleMetaList": {
+  "extends": null,
+  "implements": [
+   "java.lang.Iterable<com.qualcomm.robotcore.hardware.LynxModuleMeta>"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.MotorControlAlgorithm": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.MotorControlAlgorithm>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.NormalizedColorSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.NormalizedRGBA": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.OpticalDistanceSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.LightSensor",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.OrientationSensor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PIDCoefficients": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PIDFCoefficients": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PWMOutput": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PWMOutputController": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PWMOutputControllerEx": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PWMOutputEx": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PWMOutputImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.PWMOutput"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PWMOutputImplEx": {
+  "extends": "com.qualcomm.robotcore.hardware.PWMOutputImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.PWMOutputEx"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PwmControl": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.PwmControl$PwmRange": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.QuaternionBasedImuHelper": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.QuaternionBasedImuHelper$FailedToRetrieveQuaternionException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.RobotConfigNameable": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.RobotCoreLynxController": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.RobotCoreLynxModule": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.RobotCoreLynxUsbDevice": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ScannedDevices": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ScannedDevices$MapAdapter": {
+  "extends": "com.google.gson.TypeAdapter<java.util.Map<com.qualcomm.robotcore.util.SerialNumber, com.qualcomm.robotcore.hardware.DeviceManager$UsbDeviceType>>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Servo": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.Servo$Direction": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.Servo$Direction>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ServoController": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ServoController$PwmStatus": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.hardware.ServoController$PwmStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ServoControllerEx": {
+  "extends": "com.qualcomm.robotcore.hardware.ServoController",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ServoImpl": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.hardware.Servo"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.ServoImplEx": {
+  "extends": "com.qualcomm.robotcore.hardware.ServoImpl",
+  "implements": [
+   "com.qualcomm.robotcore.hardware.PwmControl"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.SwitchableLight": {
+  "extends": "com.qualcomm.robotcore.hardware.Light",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.TimestampedData": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.TimestampedI2cData": {
+  "extends": "com.qualcomm.robotcore.hardware.TimestampedData",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.TouchSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.TouchSensorMultiplexer": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.USBAccessibleLynxModule": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.UltrasonicSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.VisuallyIdentifiableHardwareDevice": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.hardware.VoltageSensor": {
+  "extends": "com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.hardware"
+ },
+ "com.qualcomm.robotcore.util.AndroidSerialNumberNotFoundException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.BatteryChecker": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.BatteryChecker$BatteryStatus": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.BatteryChecker$BatteryWatcher": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.BatteryChecker$Monitor": {
+  "extends": "android.content.BroadcastReceiver",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ClassUtil": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ClassUtil$MappedByteBufferInfo": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ClockWarningSource": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.util.GlobalWarningSource",
+   "org.firstinspires.ftc.robotcore.internal.network.PeerStatusCallback",
+   "android.content.SharedPreferences$OnSharedPreferenceChangeListener"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Device": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Device$LinuxKernelVersion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.DifferentialControlLoopCoefficients": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Dimmer": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ElapsedTime": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ElapsedTime$Resolution": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.util.ElapsedTime$Resolution>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.GlobalWarningSource": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ImmersiveMode": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.IncludedFirmwareFileInfo": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Intents": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.LastKnown": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.MovingStatistics": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Network": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.NextLock": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.NextLock$Waiter": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Range": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ReadWriteFile": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.RobotLog": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.RobotLog$GlobalWarningMessage": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.RobotLog$LoggingThread": {
+  "extends": "java.lang.Thread",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.RollingAverage": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.RunShellCommand": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.RunShellCommand$ProcessResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.SerialNumber": {
+  "extends": null,
+  "implements": [
+   "java.io.Serializable"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.SerialNumber$GsonTypeAdapter": {
+  "extends": "com.google.gson.TypeAdapter<com.qualcomm.robotcore.util.SerialNumber>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ShortHash": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.SoftwareVersionWarningSource": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.util.GlobalWarningSource",
+   "org.firstinspires.ftc.robotcore.internal.network.PeerStatusCallback",
+   "android.content.SharedPreferences$OnSharedPreferenceChangeListener"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.SoftwareVersionWarningSource$MismatchedAppsDetail": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.SortOrder": {
+  "extends": "java.lang.Enum<com.qualcomm.robotcore.util.SortOrder>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Statistics": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$ContainerOfThreads": {
+  "extends": "java.lang.Iterable<java.lang.Thread>",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$ContainerOfThreadsRecorder": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.util.ThreadPool$ContainerOfThreads"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$RecordingScheduledExecutor": {
+  "extends": "com.qualcomm.robotcore.util.ThreadPool$ContainerOfThreadsRecorder",
+  "implements": [
+   "java.util.concurrent.ScheduledExecutorService"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$RecordingThreadPool": {
+  "extends": "com.qualcomm.robotcore.util.ThreadPool$ContainerOfThreadsRecorder",
+  "implements": [
+   "java.util.concurrent.ExecutorService"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$Singleton": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$SingletonResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$ThreadBorrowable": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.ThreadPool$ThreadFactoryImpl": {
+  "extends": null,
+  "implements": [
+   "java.util.concurrent.ThreadFactory"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.TypeConversion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Util": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.Version": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.WeakReferenceSet": {
+  "extends": null,
+  "implements": [
+   "java.util.Set<E>"
+  ],
+  "kind": "class",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.WebHandlerManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "com.qualcomm.robotcore.util.WebServer": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.qualcomm.robotcore.util"
+ },
+ "org.firstinspires.ftc.ftccommon.external.OnCreate": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.OnCreateEventLoop": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.OnCreateMenu": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.OnDestroy": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.RobotStateMonitor": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.SoundPlayingRobotMonitor": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.ftccommon.external.RobotStateMonitor"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.SoundPlayingRobotMonitor$Sound": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.ftccommon.external.SoundPlayingRobotMonitor$Sound>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.ftccommon.external.WebHandlerRegistrar": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.ftccommon.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.BlocksOpModeCompanion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ClassFactory": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ClassFactory$InstanceHolder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Const": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Consumer": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Event": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ExportAprilTagLibraryToBlocks": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ExportClassToBlocks": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ExportEnumToBlocks": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ExportToBlocks": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Func": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Function": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.JavaUtil": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.JavaUtil$AtMode": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.JavaUtil$AtMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.JavaUtil$SortDirection": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.JavaUtil$SortDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.JavaUtil$SortType": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.JavaUtil$SortType>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.JavaUtil$TrimMode": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.JavaUtil$TrimMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.NonConst": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Predicate": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.SignificantMotionDetection": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.SignificantMotionDetection$SignificantMotionDetectionListener": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.SignificantMotionDetection$TriggerListener": {
+  "extends": "android.hardware.TriggerEventListener",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.State": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.StateMachine": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.StateTransition": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Supplier": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Telemetry": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Telemetry$DisplayFormat": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.Telemetry$DisplayFormat>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Telemetry$Item": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Telemetry$Line": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Telemetry$Log": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.Telemetry$Log$DisplayOrder": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.Telemetry$Log$DisplayOrder>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.ThrowingCallable": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external"
+ },
+ "org.firstinspires.ftc.robotcore.external.android.AndroidAccelerometer": {
+  "extends": null,
+  "implements": [
+   "android.hardware.SensorEventListener"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.android"
+ },
+ "org.firstinspires.ftc.robotcore.external.android.AndroidGyroscope": {
+  "extends": null,
+  "implements": [
+   "android.hardware.SensorEventListener"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.android"
+ },
+ "org.firstinspires.ftc.robotcore.external.android.AndroidOrientation": {
+  "extends": null,
+  "implements": [
+   "android.hardware.SensorEventListener"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.android"
+ },
+ "org.firstinspires.ftc.robotcore.external.android.AndroidSoundPool": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.android"
+ },
+ "org.firstinspires.ftc.robotcore.external.android.AndroidTextToSpeech": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.android"
+ },
+ "org.firstinspires.ftc.robotcore.external.android.util.Size": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.android.util"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Consumer": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Continuation": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Continuation$Dispatcher": {
+  "extends": "org.firstinspires.ftc.robotcore.internal.system.MemberwiseCloneable<org.firstinspires.ftc.robotcore.external.function.Continuation$Dispatcher<S>>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Continuation$ExecutorDispatcher": {
+  "extends": "org.firstinspires.ftc.robotcore.external.function.Continuation$Dispatcher<S>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Continuation$HandlerDispatcher": {
+  "extends": "org.firstinspires.ftc.robotcore.external.function.Continuation$Dispatcher<S>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Continuation$TrivialDispatcher": {
+  "extends": "org.firstinspires.ftc.robotcore.external.function.Continuation$Dispatcher<S>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.ContinuationResult": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Function": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.InterruptableThrowingCallable": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.InterruptableThrowingRunnable": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.InterruptableThrowingSupplier": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Predicate": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.Supplier": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.ThrowingCallable": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.ThrowingRunnable": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.function.ThrowingSupplier": {
+  "extends": "java.lang.Throwable>",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.function"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraName": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraName",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraControls",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$Error": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$Error>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$OpenFailure": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$OpenFailure>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$StateCallback": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$StateCallbackDefault": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera$StateCallback"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureRequest": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSequenceId": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSession": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSession$CaptureCallback": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSession$StateCallback": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSession$StateCallbackDefault": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSession$StateCallback"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCaptureSession$StatusCallback": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCharacteristics": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraCharacteristics$CameraMode": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraControls": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraException": {
+  "extends": "java.lang.Exception",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraFrame": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraName": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.SwitchableCamera": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.Camera",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.CameraName,com.qualcomm.robotcore.hardware.HardwareDevice",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.CameraControl": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.CameraControl",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl$Mode": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.hardware.camera.controls.ExposureControl$Mode>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.FocusControl": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.CameraControl",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.FocusControl$Mode": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.hardware.camera.controls.FocusControl$Mode>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.GainControl": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.CameraControl",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.PtzControl": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.CameraControl",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.PtzControl$PanTiltHolder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.WhiteBalanceControl": {
+  "extends": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.CameraControl",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.hardware.camera.controls.WhiteBalanceControl$Mode": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.hardware.camera.controls.WhiteBalanceControl$Mode>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.hardware.camera.controls"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.ColumnMajorMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.DenseMatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.ColumnMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.MatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.DenseMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.MatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.GeneralMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.RowMajorMatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.MatrixF": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.ColumnMajorMatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.RowMajorMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.DenseMatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.RowMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.MatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.SliceMatrixF": {
+  "extends": "org.firstinspires.ftc.robotcore.external.matrices.MatrixF",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.matrices.VectorF": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.matrices"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Acceleration": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.AngleUnit": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.AngleUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.AngularVelocity": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.AxesOrder": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.AxesOrder>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.AxesReference": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.AxesReference>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Axis": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.Axis>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.MagneticFlux": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.MotionDetection": {
+  "extends": null,
+  "implements": [
+   "android.hardware.SensorEventListener"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.MotionDetection$MotionDetectionListener": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.MotionDetection$Vector": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.NavUtil": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Orientation": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Orientation$AngleSet": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.Orientation$AngleSet>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Pose2D": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Pose3D": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Position": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Quaternion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Rotation": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.Rotation>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.TempUnit": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.TempUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Temperature": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.UnnormalizedAngleUnit": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.UnnormalizedAngleUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.Velocity": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.VoltageUnit": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.robotcore.external.navigation.VoltageUnit>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.navigation"
+ },
+ "org.firstinspires.ftc.robotcore.external.stream.CameraStreamClient": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.stream"
+ },
+ "org.firstinspires.ftc.robotcore.external.stream.CameraStreamClient$Listener": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.stream"
+ },
+ "org.firstinspires.ftc.robotcore.external.stream.CameraStreamClient$PartialFrame": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.stream"
+ },
+ "org.firstinspires.ftc.robotcore.external.stream.CameraStreamServer": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier$Notifications"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.robotcore.external.stream"
+ },
+ "org.firstinspires.ftc.robotcore.external.stream.CameraStreamSource": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.robotcore.external.stream"
+ },
+ "org.firstinspires.ftc.vision.VisionPortal": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.robotcore.external.stream.CameraStreamSource"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortal$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortal$CameraState": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.VisionPortal$CameraState>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortal$MultiPortalLayout": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.VisionPortal$MultiPortalLayout>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortal$StreamFormat": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.VisionPortal$StreamFormat>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortalImpl": {
+  "extends": "org.firstinspires.ftc.vision.VisionPortal",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortalImpl$OpModeNotificationsListener": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier$Notifications"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionPortalImpl$ProcessingPipeline": {
+  "extends": "org.openftc.easyopencv.TimestampedOpenCvPipeline",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionProcessor": {
+  "extends": "org.firstinspires.ftc.vision.VisionProcessorInternal",
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.VisionProcessorInternal": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "org.firstinspires.ftc.vision"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagCanvasAnnotator": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagCanvasAnnotator$LinePaint": {
+  "extends": "android.graphics.Paint",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagDetection": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagGameDatabase": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagLibrary": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagLibrary$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagMetadata": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagPoseFtc": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagPoseRaw": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagProcessor": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.vision.VisionProcessor"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagProcessor$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagProcessor$PoseSolver": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.apriltag.AprilTagProcessor$PoseSolver>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagProcessor$TagFamily": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.apriltag.AprilTagProcessor$TagFamily>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagProcessorImpl": {
+  "extends": "org.firstinspires.ftc.vision.apriltag.AprilTagProcessor",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.apriltag.AprilTagProcessorImpl$Pose": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.apriltag"
+ },
+ "org.firstinspires.ftc.vision.opencv.Circle": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.vision.VisionProcessor"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$Blob": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$BlobCriteria": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$BlobCriteria>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$BlobFilter": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$BlobSort": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$ContourMode": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$ContourMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$MorphOperationType": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$MorphOperationType>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$Util": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessorImpl": {
+  "extends": "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor",
+  "implements": [
+   "org.firstinspires.ftc.vision.VisionProcessor"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessorImpl$BlobImpl": {
+  "extends": "org.firstinspires.ftc.vision.opencv.ColorBlobLocatorProcessor$Blob",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorRange": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ColorSpace": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.opencv.ColorSpace>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.ImageRegion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.PredominantColorProcessor": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.vision.VisionProcessor"
+  ],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.PredominantColorProcessor$Builder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.PredominantColorProcessor$Result": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.PredominantColorProcessor$Swatch": {
+  "extends": "java.lang.Enum<org.firstinspires.ftc.vision.opencv.PredominantColorProcessor$Swatch>",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ },
+ "org.firstinspires.ftc.vision.opencv.PredominantColorProcessorImpl": {
+  "extends": "org.firstinspires.ftc.vision.opencv.PredominantColorProcessor",
+  "implements": [],
+  "kind": "class",
+  "package": "org.firstinspires.ftc.vision.opencv"
+ }
+}

@@ -1,0 +1,604 @@
+{
+ "com.pedropathing.ErrorCalculator": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing"
+ },
+ "com.pedropathing.VectorCalculator": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing"
+ },
+ "com.pedropathing.control.FilteredPIDFCoefficients": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.FilteredPIDFController": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.KalmanFilter": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.control.NoiseFilter"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.KalmanFilterParameters": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.LowPassFilter": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.control.NoiseFilter"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.NoiseFilter": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.PIDFCoefficientSupplier": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.PIDFCoefficientSupplier$PIDFPiecewiseNode": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.PIDFCoefficients": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.control.PIDFCoefficientSupplier"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.PIDFController": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.PredictiveBrakingCoefficients": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.control.PredictiveBrakingController": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.control"
+ },
+ "com.pedropathing.drivetrain.CustomDrivetrain": {
+  "extends": "com.pedropathing.drivetrain.Drivetrain",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.drivetrain"
+ },
+ "com.pedropathing.drivetrain.Drivetrain": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.drivetrain"
+ },
+ "com.pedropathing.follower.Follower": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.follower"
+ },
+ "com.pedropathing.follower.FollowerConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.follower"
+ },
+ "com.pedropathing.ftc.FTCCoordinates": {
+  "extends": "java.lang.Enum<com.pedropathing.ftc.FTCCoordinates>",
+  "implements": [
+   "com.pedropathing.geometry.CoordinateSystem"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc"
+ },
+ "com.pedropathing.ftc.FollowerBuilder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc"
+ },
+ "com.pedropathing.ftc.InvertedFTCCoordinates": {
+  "extends": "java.lang.Enum<com.pedropathing.ftc.InvertedFTCCoordinates>",
+  "implements": [
+   "com.pedropathing.geometry.CoordinateSystem"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc"
+ },
+ "com.pedropathing.ftc.PoseConverter": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc"
+ },
+ "com.pedropathing.ftc.drivetrains.CoaxialPod": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.ftc.drivetrains.SwervePod"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.Mecanum": {
+  "extends": "com.pedropathing.drivetrain.Drivetrain",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.MecanumConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.MecanumEx": {
+  "extends": "com.pedropathing.drivetrain.CustomDrivetrain",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.Swerve": {
+  "extends": "com.pedropathing.drivetrain.CustomDrivetrain",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.SwerveBuilder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.SwerveConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.SwerveConstants$ZeroPowerBehavior": {
+  "extends": "java.lang.Enum<com.pedropathing.ftc.drivetrains.SwerveConstants$ZeroPowerBehavior>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.drivetrains.SwervePod": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.ftc.drivetrains"
+ },
+ "com.pedropathing.ftc.localization.CustomIMU": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.ftc.localization"
+ },
+ "com.pedropathing.ftc.localization.Encoder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization"
+ },
+ "com.pedropathing.ftc.localization.RevHubIMU": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.ftc.localization.CustomIMU"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization"
+ },
+ "com.pedropathing.ftc.localization.constants.DriveEncoderConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.constants.OTOSConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.constants.OctoQuadConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.constants.PinpointConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.constants.ThreeWheelConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.constants.ThreeWheelIMUConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.constants.TwoWheelConstants": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.constants"
+ },
+ "com.pedropathing.ftc.localization.localizers.DriveEncoderLocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.OTOSLocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.OctoQuadLocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.OctoQuadLocalizer$DataSupplier": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.OctoQuadLocalizer$InitMode": {
+  "extends": "java.lang.Enum<com.pedropathing.ftc.localization.localizers.OctoQuadLocalizer$InitMode>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.PinpointLocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.ThreeWheelIMULocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.ThreeWheelLocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.ftc.localization.localizers.TwoWheelLocalizer": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.localization.Localizer"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.ftc.localization.localizers"
+ },
+ "com.pedropathing.geometry.BezierCurve": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.geometry.Curve"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.BezierLine": {
+  "extends": "com.pedropathing.geometry.BezierCurve",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.BezierPoint": {
+  "extends": "com.pedropathing.geometry.BezierCurve",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.CharacteristicMatrixSupplier": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.CoordinateSystem": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.Curve": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.CustomCurve": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.geometry.Curve"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.FinetunedBezierCurve": {
+  "extends": "com.pedropathing.geometry.BezierCurve",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.FinetunedBezierLine": {
+  "extends": "com.pedropathing.geometry.BezierLine",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.FuturePose": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.PedroCoordinates": {
+  "extends": "java.lang.Enum<com.pedropathing.geometry.PedroCoordinates>",
+  "implements": [
+   "com.pedropathing.geometry.CoordinateSystem"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.Pose": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.geometry.FuturePose"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.geometry.TVector": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.geometry"
+ },
+ "com.pedropathing.localization.Localizer": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.localization"
+ },
+ "com.pedropathing.localization.PoseTracker": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.localization"
+ },
+ "com.pedropathing.math.AbstractBijectiveMap": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.math.BijectiveMap<T",
+   "S>"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.AbstractBijectiveMap$NumericBijectiveMap": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.math.BijectiveMap<java.lang.Double",
+   "java.lang.Double>"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.AbstractBijectiveMap$NumericBijectiveMap$InterpolatableMap": {
+  "extends": "java.util.TreeMap<java.lang.Double, java.lang.Double>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.BijectiveMap": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.Kinematics": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.MathFunctions": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.Matrix": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.math.Vector": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.math"
+ },
+ "com.pedropathing.paths.HeadingInterpolator": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.HeadingInterpolator$FutureDouble": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.HeadingInterpolator$PiecewiseNode": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.Path": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathBuilder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathBuilder$CallbackCondition": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathChain": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathChain$DecelerationType": {
+  "extends": "java.lang.Enum<com.pedropathing.paths.PathChain$DecelerationType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathChain$PathT": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathConstraints": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.PathPoint": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.paths"
+ },
+ "com.pedropathing.paths.callbacks.ParametricCallback": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.paths.callbacks.PathCallback"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.paths.callbacks"
+ },
+ "com.pedropathing.paths.callbacks.PathCallback": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.pedropathing.paths.callbacks"
+ },
+ "com.pedropathing.paths.callbacks.PoseCallback": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.paths.callbacks.PathCallback"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.paths.callbacks"
+ },
+ "com.pedropathing.paths.callbacks.TemporalCallback": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.paths.callbacks.PathCallback"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.paths.callbacks"
+ },
+ "com.pedropathing.util.FiniteRunAction": {
+  "extends": null,
+  "implements": [
+   "com.pedropathing.paths.callbacks.PathCallback"
+  ],
+  "kind": "class",
+  "package": "com.pedropathing.util"
+ },
+ "com.pedropathing.util.NanoTimer": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.util"
+ },
+ "com.pedropathing.util.PoseHistory": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.util"
+ },
+ "com.pedropathing.util.Timer": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.pedropathing.util"
+ }
+}

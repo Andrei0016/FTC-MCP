@@ -11,5 +11,10 @@ dist/
 .idea/
 .junie/
 
+# Generated SDK reference: digests in src/ftc_mcp/sdk/ ARE committed; the bulky
+# CFR-decompiled source and the download cache are not (regenerate with build.sh).
+reference/
+tools/gen_reference/.cache/
+
 # NOTE: do not add a bare ".claude" here — src/ftc_mcp/templates/project/.claude/
 # must stay tracked so it ships in the package.

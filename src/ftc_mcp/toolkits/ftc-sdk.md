@@ -2,6 +2,10 @@
 
 Docs: https://ftc-docs.firstinspires.org · Javadoc: https://javadoc.io/doc/org.firstinspires.ftc
 
+> **Exact API:** this page is an orientation guide. For every team-facing class and method
+> signature (decompiled from RobotCore/Hardware/Vision 11.1.0) use `ftc://sdk/ftc-sdk`,
+> the `sdk_search("...")` tool, or `sdk_class("DcMotorEx")`. Don't guess method names.
+
 ## OpMode lifecycle
 `OpMode` (iterative): `init()` → `init_loop()`* → `start()` → `loop()`* → `stop()`.
 `LinearOpMode`: one `runOpMode()` with `waitForStart()` — the reference style uses

@@ -1,0 +1,678 @@
+{
+ "com.bylazar.configurables.ChangeJson": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.ConfigurablesLogger": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.ConfigurablesPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.GenericTypeJson": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.GlobalConfigurables": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.PanelsConfigurables": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.configurables.ConfigurablesPluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.TPair": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables"
+ },
+ "com.bylazar.configurables.annotations.Configurable": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.bylazar.configurables.annotations"
+ },
+ "com.bylazar.configurables.annotations.GenericValue": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.bylazar.configurables.annotations"
+ },
+ "com.bylazar.configurables.annotations.IgnoreConfigurable": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.bylazar.configurables.annotations"
+ },
+ "com.bylazar.configurables.annotations.Sorter": {
+  "extends": "java.lang.annotation.Annotation",
+  "implements": [],
+  "kind": "interface",
+  "package": "com.bylazar.configurables.annotations"
+ },
+ "com.bylazar.configurables.variables.BaseTypes": {
+  "extends": "java.lang.Enum<com.bylazar.configurables.variables.BaseTypes>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.ConvertValueKt": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.ConvertValueKt$WhenMappings": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.MyField": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.MyField$WhenMappings": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.MyFieldKt": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.ProcessValueKt": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.RecursionDetectedException": {
+  "extends": "java.lang.RuntimeException",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.TypesKt": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables"
+ },
+ "com.bylazar.configurables.variables.generics.GenericField": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.generics"
+ },
+ "com.bylazar.configurables.variables.generics.GenericVariable": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.generics"
+ },
+ "com.bylazar.configurables.variables.instances.CustomVariable": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.instances"
+ },
+ "com.bylazar.configurables.variables.instances.ErrorVariable": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.instances"
+ },
+ "com.bylazar.configurables.variables.instances.JSONErrorVariable": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.instances"
+ },
+ "com.bylazar.configurables.variables.instances.RecursionReachedVariable": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.instances"
+ },
+ "com.bylazar.configurables.variables.instances.UnknownVariable": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.instances"
+ },
+ "com.bylazar.configurables.variables.instances.UnsupportedVariable": {
+  "extends": "com.bylazar.configurables.variables.generics.GenericVariable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.configurables.variables.instances"
+ },
+ "com.bylazar.field.Canvas": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.CanvasRotation": {
+  "extends": "java.lang.Enum<com.bylazar.field.CanvasRotation>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Circle": {
+  "extends": "com.bylazar.field.Drawable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Drawable": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.DrawablesTypes": {
+  "extends": "java.lang.Enum<com.bylazar.field.DrawablesTypes>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.FieldImage": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.FieldImages": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.FieldManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.FieldPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.FieldPresetParams": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.FieldPresets": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Image": {
+  "extends": "com.bylazar.field.Drawable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.ImagePreset": {
+  "extends": null,
+  "implements": [],
+  "kind": "interface",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Line": {
+  "extends": "com.bylazar.field.Drawable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.PanelsField": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.field.FieldPluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Rectangle": {
+  "extends": "com.bylazar.field.Drawable",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.field.Style": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.field"
+ },
+ "com.bylazar.gamepad.Gamepad": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.GamepadManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.GamepadPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.GamepadTimestamps": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.PanelsGamepad": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.gamepad.GamepadPluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.Stick": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.gamepad.StickTimestamps": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.gamepad"
+ },
+ "com.bylazar.graph.GraphPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.graph"
+ },
+ "com.bylazar.graph.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.graph.GraphPluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.graph"
+ },
+ "com.bylazar.opmodecontrol.ActiveOpMode": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.opmodecontrol.OpModeControlPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.opmodecontrol.OpModeDetails": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.opmodecontrol.OpModeStatus": {
+  "extends": "java.lang.Enum<com.bylazar.opmodecontrol.OpModeStatus>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.opmodecontrol.OpModesList": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.opmodecontrol.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.panels.plugins.BasePluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.opmodecontrol.Plugin$FetcherRoutine": {
+  "extends": null,
+  "implements": [
+   "java.lang.Runnable"
+  ],
+  "kind": "class",
+  "package": "com.bylazar.opmodecontrol"
+ },
+ "com.bylazar.panels.GlobalStats": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.Logger": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.Panels": {
+  "extends": null,
+  "implements": [
+   "com.qualcomm.robotcore.eventloop.opmode.OpModeManagerNotifier$Notifications"
+  ],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.Panels$StartRoutine": {
+  "extends": null,
+  "implements": [
+   "java.lang.Runnable"
+  ],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.PanelsConfig": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.TaskTimer": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.TaskTiming": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels"
+ },
+ "com.bylazar.panels.core.OpModeHandler": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.core"
+ },
+ "com.bylazar.panels.core.PreferencesHandler": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.core"
+ },
+ "com.bylazar.panels.core.TextHandler": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.core"
+ },
+ "com.bylazar.panels.json.Change": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.ChangeLogEntry": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.ChangeLogType": {
+  "extends": "java.lang.Enum<com.bylazar.panels.json.ChangeLogType>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.PanelsWidget": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.PluginData": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.PluginDetails": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.PluginInfo": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.SocketMessage": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.SocketMessage$Companion": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.Template": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.TemplateNavlet": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.TemplateWidget": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.TemplateWidgetGroup": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.json.TimeData": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.json"
+ },
+ "com.bylazar.panels.plugins.BasePluginConfig": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.plugins"
+ },
+ "com.bylazar.panels.plugins.Plugin": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.plugins"
+ },
+ "com.bylazar.panels.plugins.PluginsManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.plugins"
+ },
+ "com.bylazar.panels.reflection.ClassFinder": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.reflection"
+ },
+ "com.bylazar.panels.reflection.ClassFinder$ClassEntry": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.reflection"
+ },
+ "com.bylazar.panels.reflection.DexUtilsKt": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.reflection"
+ },
+ "com.bylazar.panels.server.Socket": {
+  "extends": "fi.iki.elonen.NanoWSD",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.server"
+ },
+ "com.bylazar.panels.server.Socket$ClientSocket": {
+  "extends": "fi.iki.elonen.NanoWSD$WebSocket",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.server"
+ },
+ "com.bylazar.panels.server.SocketTask": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.server"
+ },
+ "com.bylazar.panels.server.StaticServer": {
+  "extends": "fi.iki.elonen.NanoHTTPD",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.server"
+ },
+ "com.bylazar.panels.server.tasks.PluginDevTask": {
+  "extends": "com.bylazar.panels.server.SocketTask",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.server.tasks"
+ },
+ "com.bylazar.panels.server.tasks.TimeTask": {
+  "extends": "com.bylazar.panels.server.SocketTask",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.panels.server.tasks"
+ },
+ "com.bylazar.telemetry.ExampleObject": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.telemetry.JoinedTelemetry": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.robotcore.external.Telemetry"
+  ],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.telemetry.PanelsTelemetry": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.telemetry.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.telemetry.TelemetryPluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.telemetry.TelemetryManager": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.telemetry.TelemetryManager$TelemetryWrapper": {
+  "extends": null,
+  "implements": [
+   "org.firstinspires.ftc.robotcore.external.Telemetry"
+  ],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.telemetry.TelemetryPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.telemetry"
+ },
+ "com.bylazar.utils.LoopTimer": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.utils"
+ },
+ "com.bylazar.utils.MovingAverageSmoother": {
+  "extends": null,
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.utils"
+ },
+ "com.bylazar.utils.Plugin": {
+  "extends": "com.bylazar.panels.plugins.Plugin<com.bylazar.utils.UtilsPluginConfig>",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.utils"
+ },
+ "com.bylazar.utils.UtilsPluginConfig": {
+  "extends": "com.bylazar.panels.plugins.BasePluginConfig",
+  "implements": [],
+  "kind": "class",
+  "package": "com.bylazar.utils"
+ }
+}

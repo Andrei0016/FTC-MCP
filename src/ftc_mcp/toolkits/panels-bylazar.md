@@ -3,6 +3,9 @@
 `com.bylazar.*` — a live dashboard + telemetry + configurables system (the FTC-Dashboard
 successor used in the reference repo). Docs: https://panels.bylazar.com
 
+> **Exact API (fullpanels 1.0.12):** `ftc://sdk/panels`, `sdk_search("...")`,
+> `sdk_class("PanelsTelemetry")`.
+
 ## Telemetry
 ```java
 import com.bylazar.telemetry.PanelsTelemetry;

@@ -12,6 +12,14 @@ and keeps a live, human-readable **map** of the whole codebase.
 `pedro-pathing`, `panels-bylazar`, `starter-core`.
 **Project map** (`ftc://project/map`): the current project's generated `map/MAP.md`.
 
+**Decompiled SDK reference** (`ftc://sdk/*`): exact `javap` signatures for every
+team-facing type in the FTC SDK (RobotCore/Hardware/Vision 11.1.0), Pedro Pathing 2.1.2
+and Panels 1.0.12 — because the FTC SDK is barely documented. `ftc://sdk` (overview),
+`ftc://sdk/<lib>` (class index), `ftc://sdk/<lib>/<package>` (signatures). Plus tools
+`sdk_search("setVelocity")` and `sdk_class("DcMotorEx")`. Regenerate for a new season
+with `tools/gen_reference/build.sh` (needs a JDK). Digests are committed; the full
+CFR-decompiled source lands in `reference/` (gitignored).
+
 **Tools**
 | tool | purpose |
 |---|---|
@@ -20,6 +28,8 @@ and keeps a live, human-readable **map** of the whole codebase.
 | `update_map` | validate `map/project-map.yaml` and regenerate `overview.mmd` / `actions.mmd` / `dataflow.mmd` / `MAP.md` |
 | `render_map` | preview YAML → generated files, no disk writes |
 | `log_change` | prepend an entry (prompt, reply, files) to `LOG.md` |
+| `sdk_search` | substring search for a class/method across the decompiled SDK reference |
+| `sdk_class` | full exact signature block for one type + pointer to decompiled source |
 
 **Prompts**: `start_ftc_project`, `ftc_change_workflow`.
 

@@ -3,6 +3,10 @@
 Docs: https://pedropathing.com/docs · A Bezier-curve path follower with odometry
 localization. Package `com.pedropathing.*`.
 
+> **Exact API (v2.1.2):** `ftc://sdk/pedro-pathing`, `sdk_search("...")`,
+> `sdk_class("Follower")`. Pedro 2.x split into `com.pedropathing:core` (pure logic) +
+> `com.pedropathing:ftc` (`FollowerBuilder`, localizers, drivetrains).
+
 ## Setup
 - `pedroPathing/Constants.java` holds `FollowerConstants`, `PathConstraints`, localizer
   and drivetrain config. `Constants.createFollower(hardwareMap)` returns a `Follower`.

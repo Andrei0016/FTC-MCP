@@ -1,0 +1,50 @@
+{
+  "note": "Versions pinned to the Pedro Pathing Quickstart (build.dependencies.gradle). Bump here + rerun build.sh each FTC season.",
+  "cfr": "https://repo1.maven.org/maven2/org/benf/cfr/0.152/cfr-0.152.jar",
+  "libs": {
+    "ftc-sdk": {
+      "version": "11.1.0",
+      "artifacts": [
+        "https://repo1.maven.org/maven2/org/firstinspires/ftc/RobotCore/11.1.0/RobotCore-11.1.0.aar",
+        "https://repo1.maven.org/maven2/org/firstinspires/ftc/Hardware/11.1.0/Hardware-11.1.0.aar",
+        "https://repo1.maven.org/maven2/org/firstinspires/ftc/FtcCommon/11.1.0/FtcCommon-11.1.0.aar",
+        "https://repo1.maven.org/maven2/org/firstinspires/ftc/Vision/11.1.0/Vision-11.1.0.aar"
+      ],
+      "include_prefixes": [
+        "com.qualcomm.robotcore.hardware",
+        "com.qualcomm.robotcore.eventloop.opmode",
+        "com.qualcomm.robotcore.util",
+        "com.qualcomm.robotcore.exception",
+        "com.qualcomm.hardware",
+        "org.firstinspires.ftc.robotcore.external",
+        "org.firstinspires.ftc.vision",
+        "org.firstinspires.ftc.ftccommon.external"
+      ],
+      "exclude_substrings": [".internal.", ".configuration.", ".usb.", ".robocol.", ".wifi.", ".factory.", ".robot.", ".lynx.commands"]
+    },
+    "pedro-pathing": {
+      "version": "2.1.2",
+      "artifacts": [
+        "https://repo1.maven.org/maven2/com/pedropathing/core/2.1.2/core-2.1.2.jar",
+        "https://repo1.maven.org/maven2/com/pedropathing/ftc/2.1.2/ftc-2.1.2.aar"
+      ],
+      "include_prefixes": ["com.pedropathing"],
+      "exclude_substrings": [".internal."]
+    },
+    "panels": {
+      "version": "fullpanels-1.0.12",
+      "artifacts": [
+        "https://mymaven.bylazar.com/releases/com/bylazar/panels/1.0.5/panels-1.0.5.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/telemetry/1.0.5/telemetry-1.0.5.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/configurables/1.0.5/configurables-1.0.5.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/field/1.0.6/field-1.0.6.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/graph/1.0.4/graph-1.0.4.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/gamepad/1.0.4/gamepad-1.0.4.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/opmodecontrol/1.0.3/opmodecontrol-1.0.3.aar",
+        "https://mymaven.bylazar.com/releases/com/bylazar/utils/1.0.4/utils-1.0.4.aar"
+      ],
+      "include_prefixes": ["com.bylazar"],
+      "exclude_substrings": [".internal.", ".impl."]
+    }
+  }
+}
