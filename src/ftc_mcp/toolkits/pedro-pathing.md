@@ -7,22 +7,38 @@ localization. Package `com.pedropathing.*`.
 > `sdk_class("Follower")`. Pedro 2.x split into `com.pedropathing:core` (pure logic) +
 > `com.pedropathing:ftc` (`FollowerBuilder`, localizers, drivetrains).
 
-## Setup
-- `pedroPathing/Constants.java` holds `FollowerConstants`, `PathConstraints`, localizer
-  and drivetrain config. `Constants.createFollower(hardwareMap)` returns a `Follower`.
-- Run the tuning opmodes (`pedroPathing/Tuning.java`) to find the drive/heading/translation
-  constants before trusting paths.
+## Setup (Pedro 2.x)
+- Keep a `pedroPathing/Constants.java` with your `FollowerConstants` (fluent setters:
+  `.translationalPIDFCoefficients(...)`, `.mass(...)`, `.forwardZeroPowerAcceleration(...)`)
+  plus the localizer + drivetrain constants (`PinpointConstants`, `MecanumConstants`, …).
+- Build the follower with `com.pedropathing.ftc.FollowerBuilder`:
+  ```java
+  Follower follower = new FollowerBuilder(Constants.followerConstants, hardwareMap)
+      .pinpointLocalizer(Constants.localizerConstants)
+      .mecanumDrivetrain(Constants.driveConstants)
+      .pathConstraints(Constants.pathConstraints)
+      .build();
+  ```
+  (Older code used `Constants.createFollower(hardwareMap)` — that was Pedro 1.x.)
+- Run the tuning opmodes to find the drive/heading/translational constants first.
 
-## Core API (`com.pedropathing.follower.Follower`)
-- `follower.setStartingPose(Pose)` / `setPose(Pose)`
-- `follower.pathBuilder()` → add `BezierLine` / `BezierCurve`, `setLinearHeadingInterpolation`,
-  `setConstantHeadingInterpolation` → `.build()` returns a `PathChain`
-- `follower.followPath(pathChain, holdEnd)` — start following
-- `follower.update()` — call every loop
-- `follower.isBusy()`, `getPathCompletion()`, `isRobotStuck()`, `getPose()`,
-  `getVelocity()` (a `com.pedropathing.math.Vector`)
-- TeleOp drive: `follower.startTeleopDrive()`, then `setTeleOpDrive(fwd, strafe, turn, robotCentric)`
-- `follower.turnTo(headingRadians)`, `follower.isTurning()`
+## Core API (`com.pedropathing.follower.Follower`) — verified against 2.1.2
+- `setStartingPose(Pose)` / `setPose(Pose)` / `setX/setY/setHeading`
+- `pathBuilder()` → `.addPath(new BezierLine(p1, p2))` / `.addPath(new BezierCurve(...))`,
+  `.setLinearHeadingInterpolation(a, b)` / `.setConstantHeadingInterpolation(h)` /
+  `.setTangentHeadingInterpolation()`, `.addTemporalCallback(ms, Runnable)` /
+  `.addParametricCallback(t, Runnable)` → `.build()` → `PathChain`
+- `followPath(chain, holdEnd)` / `followPath(chain, maxPower, holdEnd)` — start following
+- `update()` — call every loop; `pausePathFollowing()` / `resumePathFollowing()` / `breakFollowing()`
+- status: `isBusy()`, `getPathCompletion()`, `atParametricEnd()`, `getCurrentTValue()`,
+  `isRobotStuck()`, `getDistanceRemaining()`, `atPose(Pose, xTol, yTol, hTol)`,
+  `getClosestPose()`
+- pose: `getPose():Pose`, `getVelocity():com.pedropathing.math.Vector`, `getHeading()`,
+  `getPoseHistory()`, `holdPoint(Pose)`
+- TeleOp: `startTeleopDrive()` / `startTeleopDrive(useBrake)`, then
+  `setTeleOpDrive(fwd, strafe, turn, robotCentric)`
+- turns: `turnTo(rad)`, `turnToDegrees(deg)`, `turn(angle, isLeft)`, `isTurning()`
+- speed: `setMaxPower(p)`, `setMaxPowerScaling(s)`
 
 ## Geometry
 `com.pedropathing.geometry.Pose` — `getX() getY() getHeading()` (heading in radians),

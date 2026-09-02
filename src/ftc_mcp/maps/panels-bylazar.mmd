@@ -1,12 +1,30 @@
+%% Panels (fullpanels 1.0.12) — orientation map. Exact signatures: ftc://sdk/panels,
+%% sdk_class("TelemetryManager"). com.bylazar.* — dashboard + telemetry + live config.
 flowchart TD
-    PanelsTelemetry["PanelsTelemetry.INSTANCE.getTelemetry()"] --> TM[TelemetryManager]
-    TM --> addData["addData(key, value)"]
-    TM --> tmUpdate["update(telemetry)"]
-    Robot -->|holds one| TM
-    Robot -->|passes into| SubUpdate["Subsystem.update(dt, tm, data)"]
+    subgraph tele["com.bylazar.telemetry"]
+      PT["PanelsTelemetry.INSTANCE  (singleton)"]
+      PT --> GT["getTelemetry() → TelemetryManager"]
+      PT --> GF["getFtcTelemetry() → TelemetryManager.TelemetryWrapper\n(implements FTC Telemetry — drop-in replacement)"]
+      GT --> TM["TelemetryManager"]
+      TM --> TMM["addData(key, Object) · addData(key, String)\naddLine(String) · debug(String...) · debug(Object...)\nupdate() · update(ftcTelemetry)\nsetUpdateInterval(ms) · getWrapper()"]
+      JT["JoinedTelemetry(Telemetry...)\ncombine Panels + DS telemetry into one"]
+    end
 
-    Configurable["@Configurable class XConfig"] --> statics["public static fields only"]
-    statics --> Sorter["@Sorter(sort = n) → dashboard order"]
-    Dashboard[Panels dashboard] -->|edits at runtime| statics
+    subgraph cfg["com.bylazar.configurables.annotations"]
+      CF["@Configurable  (class-level; exposes public static fields live)"]
+      SR["@Sorter(sort = n)  (dashboard ordering)"]
+      IG["@IgnoreConfigurable  (skip one field)"]
+      GV["@GenericValue(tParam=, vParam=)  (typed generic fields)"]
+    end
+    CF --- SR --- IG
+    PC["com.bylazar.configurables.PanelsConfigurables / GlobalConfigurables\n(programmatic access to registered configurables)"]
 
-    Drawing["core/utils/Drawing.java\nwraps Panels canvas"] --> field["draw robot + target poses"]
+    subgraph plugins["Dashboard plugins"]
+      FIELD["com.bylazar.field — field overlay:\nPanelsField, canvas draw (robot + target poses)"]
+      GRAPH["com.bylazar.graph — live plots of configurable/telemetry values"]
+      GAMEPAD["com.bylazar.gamepad — virtual gamepad from the dashboard"]
+      OPC["com.bylazar.opmodecontrol — start/stop opmodes from the dashboard"]
+    end
+
+    Robot["your Robot class"] -->|holds one| TM
+    Robot -->|passes tm into| SUB["Subsystem.update(dt, tm, data)"]

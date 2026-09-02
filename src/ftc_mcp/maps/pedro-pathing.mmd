@@ -1,17 +1,54 @@
+%% Pedro Pathing 2.1.2 — orientation map. Exact signatures: ftc://sdk/pedro-pathing,
+%% sdk_class("Follower"). Pedro 2.x = com.pedropathing:core (logic) + :ftc (bindings).
 flowchart TD
-    Constants["pedroPathing/Constants.java\nFollowerConstants + PathConstraints"] --> createFollower["Constants.createFollower(hardwareMap)"]
-    createFollower --> Follower
+    subgraph setup["Follower setup — com.pedropathing.ftc"]
+      FC["FollowerConstants\n(fluent: translationalPIDFCoefficients(), mass(),\nforwardZeroPowerAcceleration(), ...)"]
+      FB["new FollowerBuilder(FollowerConstants, hardwareMap)"]
+      LOC["localizer:\npinpointLocalizer(PinpointConstants) |\nOTOSLocalizer | twoWheelLocalizer |\nthreeWheelLocalizer | threeWheelIMULocalizer |\ndriveEncoderLocalizer"]
+      DT["drivetrain:\nmecanumDrivetrain(MecanumConstants) |\nmecanumExDrivetrain | swerveDrivetrain"]
+      FC --> FB --> LOC --> DT --> BUILD["build() → Follower"]
+    end
 
-    Follower --> setPose["setStartingPose / setPose(Pose)"]
-    Follower --> pathBuilder["pathBuilder()"]
-    pathBuilder --> beziers["BezierLine / BezierCurve\n+ heading interpolation"]
-    beziers --> PathChain
-    PathChain --> followPath["followPath(chain, holdEnd)"]
-    Follower --> update["update()  (every loop)"]
-    Follower --> teleop["startTeleopDrive()\nsetTeleOpDrive(fwd,strafe,turn,robotCentric)"]
-    Follower --> turn["turnTo(rad) / isTurning()"]
+    BUILD --> Follower
 
-    Follower --> status["isBusy() / getPathCompletion() / isRobotStuck()"]
-    Follower --> odom["getPose():Pose / getVelocity():Vector"]
+    subgraph follow["Path following"]
+      PB["follower.pathBuilder() → PathBuilder"]
+      PB --> CURVE["addPath(new BezierLine/BezierCurve/BezierPoint)\nsetLinearHeadingInterpolation(a,b)\nsetConstantHeadingInterpolation(h)\nsetTangentHeadingInterpolation()\naddParametricCallback(t, ->{}) / addTemporalCallback(ms, ->{})"]
+      CURVE --> PATHCHAIN["build() → PathChain"]
+      PATHCHAIN --> FP["follower.followPath(chain, holdEnd)\nfollowPath(chain, maxPower, holdEnd)"]
+      FP --> STATUS["isBusy() · getPathCompletion() · atParametricEnd()\ngetCurrentTValue() · isRobotStuck() · getDistanceRemaining()\ngetClosestPose() · atPose(pose, xTol, yTol, hTol)"]
+      Follower --> SPEED["setMaxPower(p) · setMaxPowerScaling(s)"]
+      Follower --> PAUSE["pausePathFollowing() · resumePathFollowing() · breakFollowing()"]
+    end
 
-    Pose["geometry.Pose\ngetX/getY/getHeading (rad)\n.mirror()"]
+    subgraph teleop["TeleOp drive"]
+      Follower --> TSTART["startTeleopDrive() / startTeleopDrive(useBrake)"]
+      TSTART --> TDRIVE["setTeleOpDrive(fwd, strafe, turn, robotCentric)\n(+ overloads with maxPower)"]
+    end
+
+    subgraph turn["Point turns"]
+      Follower --> TURN["turnTo(rad) · turnToDegrees(deg)\nturn(angle, isLeft) · turnDegrees(deg, isLeft)\nisTurning()"]
+    end
+
+    subgraph pose["Pose + odometry — every loop"]
+      Follower --> UPDATE["follower.update()  (call once per loop)"]
+      Follower --> POSE["setStartingPose(Pose) · setPose(Pose) · setX/Y/Heading\ngetPose():Pose · getVelocity():Vector · getHeading()\ngetPoseHistory() · holdPoint(Pose)"]
+    end
+
+    subgraph geo["com.pedropathing.geometry"]
+      Pose["Pose (x, y, heading-rad)"]
+      Beziers["BezierLine · BezierCurve · BezierPoint"]
+      Coords["PedroCoordinates · FTCCoordinates · InvertedFTCCoordinates"]
+    end
+
+    subgraph paths["com.pedropathing.paths"]
+      P2["Path · PathChain · PathBuilder · PathConstraints · PathPoint"]
+    end
+
+    subgraph control["com.pedropathing.control"]
+      C["PIDFController · FilteredPIDFController · KalmanFilter\nLowPassFilter · PIDFCoefficients · FilteredPIDFCoefficients"]
+    end
+
+    subgraph mathpkg["com.pedropathing.math"]
+      M["Vector · Matrix · Kinematics · MathFunctions"]
+    end

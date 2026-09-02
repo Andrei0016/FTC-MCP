@@ -1,19 +1,63 @@
+%% FTC SDK 11.1.0 — orientation map (team-facing surface only).
+%% Exact signatures: ftc://sdk/ftc-sdk, sdk_class("DcMotorEx"), sdk_search("...").
 flowchart TD
-    OpMode[OpMode / LinearOpMode] --> init["init() / start() / loop() / stop()"]
-    OpMode --> hwMap[hardwareMap]
-    OpMode --> gp[gamepad1 / gamepad2]
-    OpMode --> tele[telemetry]
+    subgraph opmode["com.qualcomm.robotcore.eventloop.opmode"]
+      OM["OpMode (iterative)\ninit() init_loop() start() loop() stop()\nfields: hardwareMap, gamepad1/2, telemetry, time"]
+      LOM["LinearOpMode\nrunOpMode(); waitForStart(); opModeIsActive();\nopModeInInit(); idle(); sleep(ms)"]
+      ANN["@TeleOp(name,group) · @Autonomous(name,group,preselectTeleOp) · @Disabled"]
+    end
 
-    hwMap --> DcMotorEx
-    hwMap --> Servo
-    hwMap --> CRServo
-    hwMap --> Sensors["IMU / DistanceSensor / ColorSensor / Limelight3A"]
-    hwMap --> LynxModule["LynxModule (bulk caching)"]
+    OM --> HW["hardwareMap: HardwareMap"]
+    HW --> HWGET["get(Class, 'name') · get(Class) · getAll(Class) · tryGet(Class,'name')"]
 
-    DcMotorEx --> mMethods["setMode / setPower / setZeroPowerBehavior / getVelocity / getCurrent"]
-    Servo --> sMethods["setPosition(0..1) / scaleRange"]
+    subgraph motors["Motor interface hierarchy"]
+      HD["HardwareDevice\ngetDeviceName/getConnectionInfo/getManufacturer/getVersion/close"]
+      DMS["DcMotorSimple\nsetPower/getPower · setDirection(Direction.FORWARD|REVERSE)"]
+      DM["DcMotor\nsetMode(RunMode.RUN_WITHOUT_ENCODER|RUN_USING_ENCODER|\nRUN_TO_POSITION|STOP_AND_RESET_ENCODER)\nsetTargetPosition/getCurrentPosition · setZeroPowerBehavior(BRAKE|FLOAT)"]
+      DME["DcMotorEx\nsetVelocity(tps) / setVelocity(v, AngleUnit) · getVelocity()\nsetPIDFCoefficients(RunMode, PIDFCoefficients) · setCurrentAlert / getCurrent(CurrentUnit)\nsetMotorEnable/Disable · isOverCurrent()"]
+      HD --> DMS --> DM --> DME
+    end
 
-    subgraph util[com.qualcomm.robotcore.util]
-      ElapsedTime
-      Range["Range.clip"]
+    subgraph servos["Servos"]
+      SV["Servo — setPosition(0..1) · getPosition · scaleRange(min,max) · setDirection"]
+      SVEX["ServoImplEx / ServoControllerEx — setPwmRange(PwmControl.PwmRange) · setPwmEnable/Disable"]
+      CRS["CRServo — setPower · setDirection"]
+    end
+
+    subgraph sensors["Sensors"]
+      TOUCH["TouchSensor — isPressed() · getValue()"]
+      DIST["DistanceSensor — getDistance(DistanceUnit)"]
+      COLOR["ColorSensor / NormalizedColorSensor — red/green/blue/alpha · getNormalizedColors()"]
+      ODS["OpticalDistanceSensor / LightSensor · AnalogInput.getVoltage() · DigitalChannel.getState()"]
+      IMU["IMU (universal) — initialize(IMU.Parameters(new RevHubOrientationOnRobot(...)))\ngetRobotYawPitchRollAngles() · getRobotOrientation(...) · resetYaw()"]
+      VOLT["VoltageSensor — getVoltage()"]
+    end
+
+    subgraph vendor["com.qualcomm.hardware.* — concrete devices"]
+      REV["rev: RevBlinkinLedDriver(BlinkinPattern) · RevColorSensorV3 · Rev2mDistanceSensor\nRevTouchSensor · RevHubOrientationOnRobot · Rev9AxisImu"]
+      BOSCH["bosch: BNO055IMU (legacy) · BHI260IMU"]
+      LYNX["lynx: LynxModule — setBulkCachingMode(BulkCachingMode.AUTO|MANUAL) · getBulkData() · clearBulkCache()"]
+      LL["limelightvision: Limelight3A — start/pause · pipelineSwitch(i) · getLatestResult():LLResult"]
+      GB["gobilda / sparkfun / dfrobot / digitalchickenlabs: pinpoint, OTOS, servo hubs, ..."]
+    end
+
+    subgraph nav["org.firstinspires.ftc.robotcore.external.navigation"]
+      UNITS["AngleUnit · DistanceUnit · CurrentUnit · UnnormalizedAngleUnit · TempUnit · VoltageUnit"]
+      POSE["Pose2D · Pose3D · Position · Velocity · Acceleration · Orientation\nYawPitchRollAngles · Quaternion · AngularVelocity"]
+    end
+
+    subgraph vision["org.firstinspires.ftc.vision"]
+      VP["VisionPortal.Builder — setCamera(hardwareMap.get(WebcamName.class,'cam'))\naddProcessor(...) · build() → VisionPortal (resumeStreaming/stopStreaming/close)"]
+      AT["apriltag: AprilTagProcessor.Builder · AprilTagDetection (ftcPose, id, metadata) · AprilTagGameDatabase"]
+      BLOB["opencv: ColorBlobLocatorProcessor · PredominantColorProcessor · ColorRange · ImageRegion"]
+      VP --> AT
+      VP --> BLOB
+    end
+
+    subgraph util["com.qualcomm.robotcore.util"]
+      U["ElapsedTime (seconds/milliseconds/reset) · Range.clip(v,lo,hi) · MovingStatistics\nRobotLog · ReadWriteFile · TypeConversion"]
+    end
+
+    subgraph gp["Gamepad"]
+      G["left_stick_x/y, right_stick_x/y, triggers, buttons\nedge helpers: aWasPressed(), dpadUpWasReleased(), ...\nrumble(ms) · rumbleBlips(n) · setLedColor(r,g,b,ms)"]
     end
