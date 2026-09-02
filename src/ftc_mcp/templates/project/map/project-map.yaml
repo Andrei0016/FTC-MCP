@@ -1,0 +1,39 @@
+# Single source of truth for this project's structure.
+# The `update_map` MCP tool validates this file and regenerates map/overview.mmd,
+# map/actions.mmd, map/dataflow.mmd and map/MAP.md from it.
+# After EVERY code change: update this file, run update_map, then log_change.
+
+package: "<<PACKAGE>>"
+
+hardware: []
+# - {name: liftMotor, type: DcMotorEx, subsystem: Lift}
+
+subsystems: []
+# - name: Lift
+#   file: TeamCode/src/main/java/<<PACKAGE_PATH>>/subsystems/Lift/Lift.java
+#   config: TeamCode/src/main/java/<<PACKAGE_PATH>>/subsystems/Lift/LiftConfig.java
+#   implements: Subsystem
+#   hardware: [liftMotor]
+#   states: [IDLE, MOVING, HOLD]
+#   api: ["goTo(height)", "isBusy()"]
+#   depends_on: [PIDF, SubsystemData]
+#   summary: "Two-stage lift, PIDF to target height."
+
+actions: []
+# - name: SCORE
+#   entrypoint: Robot.score()
+#   sequence: "RAISING -> EXTENDING -> RELEASING -> RETRACTING"
+#   touches: [lift, arm, gripper]
+
+opmodes:
+  teleop: []
+  # - {class: teleOpRED, alliance: RED, base: BaseTeleOp}
+  auto: []
+  # - {class: RedAutoClose, alliance: RED, routine: RedAutoCloseRoutine}
+
+routines: []
+# - name: RedAutoCloseRoutine
+#   steps: ["move(toGoal, .8)", "shootSequence()", "move(toPark, 1)"]
+
+dataflow: []
+# - {from: ComputerVision, to: Turret, via: "SubsystemData.goalPoseAdjusted"}

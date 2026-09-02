@@ -1,0 +1,17 @@
+package <<PACKAGE>>.subsystems.<<NAME>>;
+
+import com.bylazar.configurables.annotations.Configurable;
+import com.bylazar.configurables.annotations.Sorter;
+
+/** Tunables for <<NAME>>. Edit live from the Panels dashboard. */
+@Configurable
+public class <<NAME>>Config {
+
+    // ── Output ─────────────────────────────────────────────────────────────
+    @Sorter(sort = 1)
+    public static double power = 1.0;
+
+    // ── Debug ──────────────────────────────────────────────────────────────
+    @Sorter(sort = 2)
+    public static boolean DEBUG_MODE = false;
+}

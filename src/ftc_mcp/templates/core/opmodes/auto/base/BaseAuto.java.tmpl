@@ -1,0 +1,59 @@
+package <<PACKAGE>>.opmodes.auto.base;
+
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+import <<PACKAGE>>.core.Robot;
+import <<PACKAGE>>.core.vars.Alliance;
+
+/** Runs an AutoRoutine step by step. Subclasses supply alliance + the routine. */
+public abstract class BaseAuto extends OpMode {
+    protected Robot robot;
+    private AutoRoutine routine;
+    private AutoRoutine.Step step;
+    private final ElapsedTime stepTimer = new ElapsedTime();
+    private boolean stepExecuted = false;
+
+    protected abstract Alliance getAlliance();
+    protected abstract AutoRoutine createRoutine(ElapsedTime timer);
+
+    @Override
+    public void init() {
+        robot = new Robot(hardwareMap, getAlliance(), true);
+        routine = createRoutine(stepTimer);
+    }
+
+    @Override
+    public void start() {
+        robot.start();
+        stepTimer.reset();
+        step = routine.getCurrentStep();
+    }
+
+    @Override
+    public void loop() {
+        if (!routine.isComplete() && step != null) {
+            if (!stepExecuted) {
+                executeStep(step);
+                routine.onStepStarted();
+                stepExecuted = true;
+            }
+            if (step.isComplete()) {
+                routine.advanceStep();
+                step = routine.getCurrentStep();
+                stepExecuted = false;
+                stepTimer.reset();
+            }
+        }
+        robot.update();
+        robot.tm.update(telemetry);
+    }
+
+    private void executeStep(AutoRoutine.Step step) {
+        switch (step.action) {
+            case TURN:  /* TODO: robot.follower.turnTo(step.turnHeading); */ break;
+            case MOVE:  /* TODO: start the path for this step */ break;
+            case IDLE:  break;
+        }
+    }
+}

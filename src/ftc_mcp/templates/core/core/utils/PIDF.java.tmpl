@@ -1,0 +1,26 @@
+package <<PACKAGE>>.core.utils;
+
+/** Minimal positional PIDF controller. kF term uses sign(error). */
+public class PIDF {
+    public double kP, kI, kD, kF;
+    private double integral, lastError;
+    private boolean hasLast = false;
+
+    public PIDF(double kP, double kI, double kD, double kF) {
+        this.kP = kP; this.kI = kI; this.kD = kD; this.kF = kF;
+    }
+
+    /** Returns motor power for the given error and loop dt (seconds). */
+    public double calculate(double error, double dt) {
+        integral += error * dt;
+        double derivative = hasLast && dt > 0 ? (error - lastError) / dt : 0;
+        lastError = error;
+        hasLast = true;
+        return kP * error + kI * integral + kD * derivative + kF * Math.signum(error);
+    }
+
+    public void reset() {
+        integral = 0;
+        hasLast = false;
+    }
+}

@@ -1,0 +1,59 @@
+package <<PACKAGE>>.opmodes.auto.base;
+
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+import <<PACKAGE>>.core.Robot;
+import <<PACKAGE>>.core.vars.Action;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BooleanSupplier;
+
+/** Builds an ordered list of Steps. Subclasses call the helpers in their constructor. */
+public abstract class AutoRoutine {
+
+    public static class Step {
+        public final Action action;
+        public final BooleanSupplier done;
+        public final double turnHeading;
+
+        Step(Action action, BooleanSupplier done, double turnHeading) {
+            this.action = action;
+            this.done = done;
+            this.turnHeading = turnHeading;
+        }
+        public boolean isComplete() { return done.getAsBoolean(); }
+    }
+
+    protected final List<Step> steps = new ArrayList<>();
+    protected final Robot robot;
+    protected final ElapsedTime timer;
+    private int index = 0;
+    private double stepStartMs = 0;
+
+    protected AutoRoutine(Robot robot, ElapsedTime timer) {
+        this.robot = robot;
+        this.timer = timer;
+    }
+
+    protected double timeInStep() { return robot.timer.milliseconds() - stepStartMs; }
+    public void onStepStarted() { stepStartMs = robot.timer.milliseconds(); }
+
+    // ── step builders ──────────────────────────────────────────────────────
+    protected void waitMs(double ms) {
+        steps.add(new Step(Action.IDLE, () -> timeInStep() >= ms, 0));
+    }
+    protected void waitUntil(BooleanSupplier cond) {
+        steps.add(new Step(Action.IDLE, cond, 0));
+    }
+    protected void turnTo(double headingRad, double timeoutMs) {
+        steps.add(new Step(Action.TURN, () -> timeInStep() >= timeoutMs, headingRad));
+    }
+
+    // ── iteration ──────────────────────────────────────────────────────────
+    public Step getCurrentStep() {
+        return index >= 0 && index < steps.size() ? steps.get(index) : null;
+    }
+    public void advanceStep() { index++; }
+    public boolean isComplete() { return index >= steps.size(); }
+}

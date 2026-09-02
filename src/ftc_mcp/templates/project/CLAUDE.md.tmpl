@@ -1,0 +1,35 @@
+# <<PROJECT_NAME>> — FTC robot code
+
+Team package: `<<PACKAGE>>`
+
+## How to work in this repo
+
+This project is built with the **ftc-mcp** server. Use its resources and tools.
+
+### Architecture (see `ftc://guide/architecture`)
+- **Subsystems** live in `subsystems/<Name>/` — `<Name>.java` (`implements Subsystem`) +
+  `@Configurable <Name>Config.java` for all tunables. Hardware is passed into the
+  constructor. Never talk to hardware outside a subsystem.
+- **`core/Robot.java`** owns every subsystem + the Pedro `Follower`, holds the
+  **action** state machines (one private `enum <Action>State` each), and exposes one
+  method per action (`shoot()`, `score()`, …) plus `isXBusy()` helpers.
+- **`core/vars/Action.java`** is the high-level action enum. **`SubsystemData`** is the
+  per-loop shared bus between subsystems.
+- **TeleOp**: `opmodes/teleop/BaseTeleOp` (abstract `OpMode`) + thin per-alliance
+  subclasses. **Auto**: `opmodes/auto/base/BaseAuto` runs an `AutoRoutine`; routine
+  subclasses build a step list with `move()/shootSequence()/turnTo()/waitUntil()`.
+
+### Code style (see `ftc://guide/code-style`)
+Organized, simple, efficient. Short one-line comments describing *what a method does /
+why* — never walls of text, never restating the code.
+
+### Mandatory loop for every change (see `ftc://guide/workflow`)
+1. Draft a plan. For anything non-trivial, run the **plan-pro-advocate** and
+   **plan-critic** agents, then reconcile.
+2. Implement with short comments.
+3. Update `map/project-map.yaml` to reflect the change.
+4. Run the `update_map` tool.
+5. Run the `log_change` tool with the prompt, your reply, and the files changed.
+
+`map/MAP.md` must always fully describe the project's logic — a reader should understand
+the whole codebase from the map alone.

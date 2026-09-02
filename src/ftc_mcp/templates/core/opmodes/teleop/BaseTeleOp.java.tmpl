@@ -1,0 +1,37 @@
+package <<PACKAGE>>.opmodes.teleop;
+
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+
+import <<PACKAGE>>.core.Robot;
+import <<PACKAGE>>.core.RobotConfig;
+import <<PACKAGE>>.core.vars.Alliance;
+
+/** Shared TeleOp behaviour. Per-alliance subclasses only supply getAlliance(). */
+public abstract class BaseTeleOp extends OpMode {
+    protected Robot robot;
+
+    protected abstract Alliance getAlliance();
+
+    @Override
+    public void init() {
+        robot = new Robot(hardwareMap, getAlliance(), false);
+    }
+
+    @Override
+    public void start() {
+        robot.start();
+    }
+
+    @Override
+    public void loop() {
+        double drive  = -gamepad1.left_stick_y * RobotConfig.DRIVE_RATE;
+        double strafe = -gamepad1.left_stick_x * RobotConfig.STRAFE_RATE;
+        double turn   = -gamepad1.right_stick_x * RobotConfig.TURN_RATE;
+        // TODO: apply drive/strafe/turn to the follower.
+
+        // TODO: map buttons to robot actions here.
+
+        robot.update();
+        robot.tm.update(telemetry);
+    }
+}

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+
+# Editors
+.idea/
+.junie/
+
+# NOTE: do not add a bare ".claude" here — src/ftc_mcp/templates/project/.claude/
+# must stay tracked so it ships in the package.

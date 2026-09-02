@@ -1,0 +1,38 @@
+flowchart TD
+    subgraph opmodes
+      BaseTeleOp["opmodes/teleop/BaseTeleOp\n(abstract OpMode)"]
+      teleOpRED --> BaseTeleOp
+      teleOpBLUE --> BaseTeleOp
+      BaseAuto["opmodes/auto/base/BaseAuto\n(abstract OpMode)"]
+      AutoRoutine["opmodes/auto/base/AutoRoutine\nstep builder"]
+      RoutineX["auto/routines/*Routine"] --> AutoRoutine
+      BaseAuto --> AutoRoutine
+    end
+
+    BaseTeleOp --> Robot
+    BaseAuto --> Robot
+
+    subgraph core
+      Robot["core/Robot.java\nowns subsystems + Follower\nruns action state machines"]
+      RobotConfig["core/RobotConfig @Configurable"]
+      Subsystem["core/interfaces/Subsystem\nisBusy() + update(dt,tm,data)"]
+      SubsystemData["core/vars/SubsystemData\nper-loop shared bus"]
+      Action["core/vars/Action enum"]
+      Alliance["core/vars/Alliance enum"]
+      Utils["core/utils/*\nPIDF, SlewRateLimiter, Drawing"]
+    end
+
+    Robot --> Subsystem
+    Robot --> SubsystemData
+    Robot --> RobotConfig
+    Robot --> Follower["Pedro Follower"]
+
+    subgraph subsystems
+      SubX["subsystems/&lt;Name&gt;/&lt;Name&gt;.java"] -->|implements| Subsystem
+      SubXCfg["subsystems/&lt;Name&gt;/&lt;Name&gt;Config.java\n@Configurable"]
+      SubX --> SubXCfg
+      SubX -->|reads| SubsystemData
+      SubX -->|uses| Utils
+    end
+
+    Robot --> SubX

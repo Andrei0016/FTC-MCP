@@ -1,0 +1,52 @@
+package <<PACKAGE>>.core;
+
+import com.bylazar.telemetry.PanelsTelemetry;
+import com.bylazar.telemetry.TelemetryManager;
+import com.qualcomm.hardware.lynx.LynxModule;
+import com.qualcomm.robotcore.hardware.HardwareMap;
+import com.qualcomm.robotcore.util.ElapsedTime;
+
+import <<PACKAGE>>.core.vars.Alliance;
+import <<PACKAGE>>.core.vars.SubsystemData;
+
+import java.util.List;
+
+/** Owns every subsystem, runs the action state machines, updates all subsystems once
+ *  per loop. OpModes only talk to Robot, never to hardware directly. */
+public class Robot {
+    public final Alliance alliance;
+    public final ElapsedTime timer = new ElapsedTime();
+    public final TelemetryManager tm = PanelsTelemetry.INSTANCE.getTelemetry();
+    private final SubsystemData data = new SubsystemData();
+    private boolean started = false;
+
+    // TODO: declare subsystem fields here, e.g. `public final Lift lift;`
+
+    public Robot(HardwareMap hwMap, Alliance alliance, boolean resetEncoders) {
+        this.alliance = alliance;
+
+        // Bulk-read both hubs once per loop.
+        for (LynxModule hub : hwMap.getAll(LynxModule.class)) {
+            hub.setBulkCachingMode(LynxModule.BulkCachingMode.AUTO);
+        }
+
+        // TODO: construct subsystems from hwMap here.
+    }
+
+    public void start() {
+        started = true;
+    }
+
+    /** Called every OpMode loop: refresh shared data, then update every subsystem. */
+    public void update() {
+        double dt = timer.seconds();
+        timer.reset();
+
+        // TODO: fill `data` with cross-subsystem info here.
+        // TODO: call update(dt, tm, data) on each subsystem here.
+
+        if (RobotConfig.DISPLAY_ROBOT_TELEMETRY) {
+            tm.addData("started", started);
+        }
+    }
+}

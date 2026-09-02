@@ -1,0 +1,17 @@
+flowchart TD
+    Constants["pedroPathing/Constants.java\nFollowerConstants + PathConstraints"] --> createFollower["Constants.createFollower(hardwareMap)"]
+    createFollower --> Follower
+
+    Follower --> setPose["setStartingPose / setPose(Pose)"]
+    Follower --> pathBuilder["pathBuilder()"]
+    pathBuilder --> beziers["BezierLine / BezierCurve\n+ heading interpolation"]
+    beziers --> PathChain
+    PathChain --> followPath["followPath(chain, holdEnd)"]
+    Follower --> update["update()  (every loop)"]
+    Follower --> teleop["startTeleopDrive()\nsetTeleOpDrive(fwd,strafe,turn,robotCentric)"]
+    Follower --> turn["turnTo(rad) / isTurning()"]
+
+    Follower --> status["isBusy() / getPathCompletion() / isRobotStuck()"]
+    Follower --> odom["getPose():Pose / getVelocity():Vector"]
+
+    Pose["geometry.Pose\ngetX/getY/getHeading (rad)\n.mirror()"]

@@ -1,0 +1,12 @@
+flowchart TD
+    PanelsTelemetry["PanelsTelemetry.INSTANCE.getTelemetry()"] --> TM[TelemetryManager]
+    TM --> addData["addData(key, value)"]
+    TM --> tmUpdate["update(telemetry)"]
+    Robot -->|holds one| TM
+    Robot -->|passes into| SubUpdate["Subsystem.update(dt, tm, data)"]
+
+    Configurable["@Configurable class XConfig"] --> statics["public static fields only"]
+    statics --> Sorter["@Sorter(sort = n) → dashboard order"]
+    Dashboard[Panels dashboard] -->|edits at runtime| statics
+
+    Drawing["core/utils/Drawing.java\nwraps Panels canvas"] --> field["draw robot + target poses"]

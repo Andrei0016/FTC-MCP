@@ -1,0 +1,16 @@
+package <<PACKAGE>>.core;
+
+import com.bylazar.configurables.annotations.Configurable;
+
+/** Robot-wide tunables and shared state. */
+@Configurable
+public class RobotConfig {
+
+    // ── Drive ──────────────────────────────────────────────────────────────
+    public static double DRIVE_RATE  = 1.0;
+    public static double STRAFE_RATE = 1.0;
+    public static double TURN_RATE   = 1.0;
+
+    // ── Debug ──────────────────────────────────────────────────────────────
+    public static boolean DISPLAY_ROBOT_TELEMETRY = true;
+}

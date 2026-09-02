@@ -1,0 +1,32 @@
+package <<PACKAGE>>.subsystems.<<NAME>>;
+
+import com.bylazar.telemetry.TelemetryManager;
+<<HW_IMPORTS>>
+import <<PACKAGE>>.core.interfaces.Subsystem;
+import <<PACKAGE>>.core.vars.SubsystemData;
+
+/** <<SUMMARY>> */
+public class <<NAME>> implements Subsystem {
+<<HW_FIELDS>>
+    private boolean enabled = false;
+<<STATE_FIELD>>
+    public <<NAME>>(<<CTOR_PARAMS>>) {
+<<CTOR_BODY>>
+    }
+
+    /** Turns the subsystem on; update() acts only while enabled. */
+    public void enable() { enabled = true; }
+
+    /** Turns the subsystem off and lets update() coast it to a safe state. */
+    public void disable() { enabled = false; }
+
+    @Override
+    public boolean isBusy() {
+        return enabled;
+    }
+
+    @Override
+    public void update(double deltaTime, TelemetryManager tm, SubsystemData data) {
+        // TODO: drive <<name>> hardware from config + shared data here.
+    }
+}

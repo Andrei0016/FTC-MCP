@@ -1,0 +1,19 @@
+flowchart TD
+    OpMode[OpMode / LinearOpMode] --> init["init() / start() / loop() / stop()"]
+    OpMode --> hwMap[hardwareMap]
+    OpMode --> gp[gamepad1 / gamepad2]
+    OpMode --> tele[telemetry]
+
+    hwMap --> DcMotorEx
+    hwMap --> Servo
+    hwMap --> CRServo
+    hwMap --> Sensors["IMU / DistanceSensor / ColorSensor / Limelight3A"]
+    hwMap --> LynxModule["LynxModule (bulk caching)"]
+
+    DcMotorEx --> mMethods["setMode / setPower / setZeroPowerBehavior / getVelocity / getCurrent"]
+    Servo --> sMethods["setPosition(0..1) / scaleRange"]
+
+    subgraph util[com.qualcomm.robotcore.util]
+      ElapsedTime
+      Range["Range.clip"]
+    end

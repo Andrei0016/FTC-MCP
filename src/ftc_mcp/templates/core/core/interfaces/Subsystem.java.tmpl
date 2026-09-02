@@ -1,0 +1,11 @@
+package <<PACKAGE>>.core.interfaces;
+
+import com.bylazar.telemetry.TelemetryManager;
+
+import <<PACKAGE>>.core.vars.SubsystemData;
+
+/** Every mechanism implements this. Robot calls update() once per loop. */
+public interface Subsystem {
+    boolean isBusy();
+    void update(double deltaTime, TelemetryManager tm, SubsystemData data);
+}
