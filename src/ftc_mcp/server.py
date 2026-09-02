@@ -27,7 +27,7 @@ def _read(base: Path, name: str, suffix: str) -> str:
 
 @mcp.resource("ftc://guide/{name}")
 def guide(name: str) -> str:
-    """FTC coding guides: architecture, code-style, planning, workflow."""
+    """FTC coding guides: architecture, code-style, planning, workflow, accuracy."""
     return _read(_GUIDES, name, ".md")
 
 
@@ -168,8 +168,8 @@ def start_ftc_project(target_dir: str, team_number: str = "") -> str:
         f"Set up a new FTC robot project in {target_dir}"
         + (f" for team {team_number}" if team_number else "")
         + ".\n\n"
-        "1. Read ftc://guide/architecture, ftc://guide/code-style, ftc://guide/planning "
-        "and ftc://guide/workflow.\n"
+        "1. Read ftc://guide/architecture, ftc://guide/code-style, ftc://guide/planning, "
+        "ftc://guide/workflow and ftc://guide/accuracy.\n"
         "2. Skim ftc://map/starter-core, ftc://map/pedro-pathing, ftc://map/panels-bylazar.\n"
         "3. Call the create_ftc_project tool with target_dir set.\n"
         "4. Confirm the plan-pro-advocate and plan-critic agents exist in .claude/agents/.\n"
@@ -188,7 +188,8 @@ def ftc_change_workflow(request: str) -> str:
         "1. Consult ftc://project/map first; open Java only for the parts you change.\n"
         "2. Draft a plan. If non-trivial, run plan-pro-advocate AND plan-critic, reconcile.\n"
         "3. Implement per ftc://guide/architecture and ftc://guide/code-style "
-        "(short one-line comments).\n"
+        "(short one-line comments). Per ftc://guide/accuracy, only use API you have "
+        "verified against the decompiled reference — never guess.\n"
         "4. Update map/project-map.yaml, then run update_map.\n"
         "5. Run log_change with this request, your reply summary and the files changed."
     )

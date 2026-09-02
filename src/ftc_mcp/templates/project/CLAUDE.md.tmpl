@@ -19,6 +19,12 @@ This project is built with the **ftc-mcp** server. Use its resources and tools.
   subclasses. **Auto**: `opmodes/auto/base/BaseAuto` runs an `AutoRoutine`; routine
   subclasses build a step list with `move()/shootSequence()/turnTo()/waitUntil()`.
 
+### Accuracy (see `ftc://guide/accuracy`)
+Only state what you can verify. The SDKs are poorly documented — confirm every method,
+signature and constant against the decompiled reference (`sdk_search`, `sdk_class`,
+`ftc://sdk/*`) or the codebase before using it. If you cannot verify something, say so
+and go check — never present a guess as fact.
+
 ### Code style (see `ftc://guide/code-style`)
 Organized, simple, efficient. Short one-line comments describing *what a method does /
 why* — never walls of text, never restating the code.

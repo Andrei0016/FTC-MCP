@@ -7,7 +7,7 @@ and keeps a live, human-readable **map** of the whole codebase.
 
 ## What it provides
 
-**Guides** (`ftc://guide/*`): `architecture`, `code-style`, `planning`, `workflow`.
+**Guides** (`ftc://guide/*`): `architecture`, `code-style`, `planning`, `workflow`, `accuracy`.
 **Toolkit refs** (`ftc://toolkit/*`) + **Mermaid maps** (`ftc://map/*`): `ftc-sdk`,
 `pedro-pathing`, `panels-bylazar`, `starter-core`.
 **Project map** (`ftc://project/map`): the current project's generated `map/MAP.md`.
