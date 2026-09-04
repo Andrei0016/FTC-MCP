@@ -142,5 +142,5 @@ Inspect locally: `.venv/bin/mcp dev src/ftc_mcp/server.py`.
 
 | env var | default | meaning |
 |---|---|---|
-| `FTC_STARTER_REPO_URL` | `https://github.com/Andrei0016/ftc-starter` | repo cloned by `create_ftc_project` (not created yet — skeleton fallback runs until it exists) |
+| `FTC_STARTER_REPO_URL` | `https://github.com/Pedro-Pathing/Quickstart` | repo cloned by `create_ftc_project` (not created yet — skeleton fallback runs until it exists) |
 | `FTC_PACKAGE` | `org.firstinspires.ftc.teamcode.robot` | default team base package |
