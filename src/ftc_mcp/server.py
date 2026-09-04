@@ -199,7 +199,8 @@ def ftc_change_workflow(request: str) -> str:
         "against the decompiled reference — never guess.\n"
         "5. Update map/project-map.yaml, then run update_map.\n"
         "6. Review the changed files yourself by reading them — do not try to compile, "
-        "there is no Android/Gradle toolchain here and it would just waste tokens.\n"
+        "there is no Android/Gradle toolchain here and it would just waste tokens. Flag "
+        "every placeholder constant with a // TODO: (see ftc://guide/code-style).\n"
         "7. Run log_change with this request, your reply summary and the files changed."
     )
 

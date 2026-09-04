@@ -8,6 +8,11 @@ Goal: organized, easy to read, as simple and efficient as possible.
 - No premature abstraction. Add an interface/generic only when a second implementation
   actually exists.
 - Constants are never inlined — they go in the matching `@Configurable` config class.
+- **Placeholder constants get a `// TODO:` note.** Any tunable you set from a guess
+  rather than a measured/verified value (PIDF gains, feedforward numbers, positions,
+  timeouts, speeds, etc.) must be flagged right on that line, e.g.
+  `public static double kP = 0.01; // TODO: tune on hardware, placeholder value` —
+  never leave a guessed number looking like a finished one.
 - No dead code, no commented-out blocks left behind. Delete it; git remembers.
 
 ## Comments

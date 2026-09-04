@@ -43,6 +43,8 @@ Instead, after implementing, **read back every changed file** and check by hand:
 - types match: constructor args, return types used correctly, no obvious null paths
 - imports exist for everything referenced; no stray/unused imports
 - braces/parens balanced, no leftover placeholder text from a template
+- every placeholder constant (a guessed value, not a measured/verified one) has a
+  `// TODO:` note on it per `ftc://guide/code-style` — nothing guessed should look finished
 - the change matches `ftc://guide/architecture` (subsystem boundaries, no drivetrain
   subsystem, hardware only touched in `update()`, etc.) and `ftc://guide/code-style`
 - the map (`project-map.yaml` + rendered files) matches what the code now does
