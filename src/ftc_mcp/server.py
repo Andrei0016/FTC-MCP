@@ -177,7 +177,8 @@ def start_ftc_project(target_dir: str, team_number: str = "") -> str:
         "your understanding and approach with them, draft a plan, run BOTH planning "
         "agents, reconcile, present the reconciled plan to the user for approval, then "
         "use the new_subsystem tool.\n"
-        "6. After every change: update map/project-map.yaml → update_map → log_change."
+        "6. After every change: update map/project-map.yaml → update_map → review the "
+        "changed files by reading them (never try to compile) → log_change."
     )
 
 
@@ -197,7 +198,9 @@ def ftc_change_workflow(request: str) -> str:
         "Pedro Follower). Per ftc://guide/accuracy, only use API you have verified "
         "against the decompiled reference — never guess.\n"
         "5. Update map/project-map.yaml, then run update_map.\n"
-        "6. Run log_change with this request, your reply summary and the files changed."
+        "6. Review the changed files yourself by reading them — do not try to compile, "
+        "there is no Android/Gradle toolchain here and it would just waste tokens.\n"
+        "7. Run log_change with this request, your reply summary and the files changed."
     )
 
 

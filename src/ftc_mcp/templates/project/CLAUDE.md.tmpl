@@ -39,7 +39,10 @@ why* — never walls of text, never restating the code.
 3. Implement with short comments.
 4. Update `map/project-map.yaml` to reflect the change.
 5. Run the `update_map` tool.
-6. Run the `log_change` tool with the prompt, your reply, and the files changed.
+6. **Review the changed files yourself** — there's no Android/Gradle toolchain here, so
+   don't try to compile; read the diff and check signatures, types, imports and
+   architecture fit by hand (see `ftc://guide/workflow`).
+7. Run the `log_change` tool with the prompt, your reply, and the files changed.
 
 `map/MAP.md` must always fully describe the project's logic — a reader should understand
 the whole codebase from the map alone.

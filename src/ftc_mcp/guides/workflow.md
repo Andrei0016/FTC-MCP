@@ -22,12 +22,33 @@ codebase without opening the Java.
    disk) and regenerates `map/overview.mmd`, `map/actions.mmd`, `map/dataflow.mmd`,
    `map/MAP.md`. Fix any reported issues.
 
-3. **Run the `log_change` tool** with:
+3. **Review the changed files yourself** (see "Verifying correctness" below) — do this
+   before `log_change`, so the log reflects code you've actually checked.
+
+4. **Run the `log_change` tool** with:
    - `prompt` — the user's request verbatim
    - `response` — a short summary of what you decided and did
    - `changes` — one line per file: `path — what & why`
 
-`new_subsystem` does steps 1–2 for you; you still call `log_change`.
+`new_subsystem` does steps 1–2 for you; you still review and call `log_change`.
+
+## Verifying correctness — read, don't compile
+There is no Android/Gradle toolchain here, so **do not try to build or compile the
+project** to check your work — the build will not run in this environment and attempting
+it just burns tokens on a failure that proves nothing.
+
+Instead, after implementing, **read back every changed file** and check by hand:
+- every method/constant called on an SDK, Pedro or Panels type matches a signature you
+  verified per `ftc://guide/accuracy` (`sdk_class`, `sdk_search`)
+- types match: constructor args, return types used correctly, no obvious null paths
+- imports exist for everything referenced; no stray/unused imports
+- braces/parens balanced, no leftover placeholder text from a template
+- the change matches `ftc://guide/architecture` (subsystem boundaries, no drivetrain
+  subsystem, hardware only touched in `update()`, etc.) and `ftc://guide/code-style`
+- the map (`project-map.yaml` + rendered files) matches what the code now does
+
+If something is genuinely uncertain after this read-through, say so rather than guessing
+— per `ftc://guide/accuracy`.
 
 ## Reading the map
 - `ftc://project/map` resource returns the current `MAP.md`.
