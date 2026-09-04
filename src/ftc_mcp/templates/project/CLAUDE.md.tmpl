@@ -34,10 +34,11 @@ rather than a measured/verified value gets a `// TODO:` note on that line.
 
 ### Mandatory loop for every change (see `ftc://guide/workflow`, `ftc://guide/planning`)
 1. Ask the user whatever is needed to understand the task.
-2. For anything non-trivial: confirm your understanding + intended approach with the
-   user, draft a plan, run **plan-pro-advocate** and **plan-critic**, reconcile, then
-   present the reconciled plan to the user and get their go-ahead.
-3. Implement with short comments.
+2. If the task looks non-trivial, **ask the user whether it needs a plan** before
+   drafting one. If yes: confirm your understanding + intended approach with the user,
+   draft a plan, run **plan-pro-advocate** and **plan-critic**, reconcile, then present
+   the reconciled plan to the user and get their go-ahead.
+3. Implement with short comments. Flag any placeholder constant with `// TODO:`.
 4. Update `map/project-map.yaml` to reflect the change.
 5. Run the `update_map` tool.
 6. **Review the changed files yourself** — there's no Android/Gradle toolchain here, so

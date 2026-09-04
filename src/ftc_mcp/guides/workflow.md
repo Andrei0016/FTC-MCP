@@ -1,7 +1,8 @@
 # Change workflow — do this for EVERY code change
 
-Before any of this: ask the user whatever you need to understand the task, and for a
-serious task (see `ftc://guide/planning`) confirm your understanding of it and get the
+Before any of this: ask the user whatever you need to understand the task. If it looks
+like a serious task (see `ftc://guide/planning`), ask the user whether it needs a plan
+before drafting one — then, if they say yes, confirm your understanding and get the
 reconciled plan approved before implementing.
 
 The `map/` directory must always fully describe the project's logic. A teammate (or a
