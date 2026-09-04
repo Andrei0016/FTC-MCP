@@ -173,8 +173,10 @@ def start_ftc_project(target_dir: str, team_number: str = "") -> str:
         "2. Skim ftc://map/starter-core, ftc://map/pedro-pathing, ftc://map/panels-bylazar.\n"
         "3. Call the create_ftc_project tool with target_dir set.\n"
         "4. Confirm the plan-pro-advocate and plan-critic agents exist in .claude/agents/.\n"
-        "5. For the first subsystem, draft a plan, run BOTH planning agents, reconcile, "
-        "then use the new_subsystem tool.\n"
+        "5. For the first subsystem: ask the user what's needed to understand it, confirm "
+        "your understanding and approach with them, draft a plan, run BOTH planning "
+        "agents, reconcile, present the reconciled plan to the user for approval, then "
+        "use the new_subsystem tool.\n"
         "6. After every change: update map/project-map.yaml → update_map → log_change."
     )
 
@@ -184,14 +186,18 @@ def ftc_change_workflow(request: str) -> str:
     """Wrap a change request in the mandatory FTC workflow."""
     return (
         f"Change request: {request}\n\n"
-        "Follow ftc://guide/workflow:\n"
-        "1. Consult ftc://project/map first; open Java only for the parts you change.\n"
-        "2. Draft a plan. If non-trivial, run plan-pro-advocate AND plan-critic, reconcile.\n"
-        "3. Implement per ftc://guide/architecture and ftc://guide/code-style "
-        "(short one-line comments). Per ftc://guide/accuracy, only use API you have "
-        "verified against the decompiled reference — never guess.\n"
-        "4. Update map/project-map.yaml, then run update_map.\n"
-        "5. Run log_change with this request, your reply summary and the files changed."
+        "Follow ftc://guide/workflow and ftc://guide/planning:\n"
+        "1. Ask the user whatever you need to understand the task before planning.\n"
+        "2. Consult ftc://project/map first; open Java only for the parts you change.\n"
+        "3. If non-trivial: confirm your understanding and intended approach with the "
+        "user, draft a plan, run plan-pro-advocate AND plan-critic, reconcile, then "
+        "present the reconciled plan to the user and get their go-ahead before coding.\n"
+        "4. Implement per ftc://guide/architecture and ftc://guide/code-style "
+        "(short one-line comments; never a drivetrain subsystem — drive through the "
+        "Pedro Follower). Per ftc://guide/accuracy, only use API you have verified "
+        "against the decompiled reference — never guess.\n"
+        "5. Update map/project-map.yaml, then run update_map.\n"
+        "6. Run log_change with this request, your reply summary and the files changed."
     )
 
 

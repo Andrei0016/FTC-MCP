@@ -29,6 +29,10 @@ TeamCode/src/main/java/<package>/
 ```
 
 ## Subsystem rules
+- **Never implement a drivetrain subsystem.** Driving is owned entirely by the Pedro
+  `Follower` (`ftc://map/pedro-pathing`, `ftc://sdk/pedro-pathing`) — `setTeleOpDrive(...)`
+  for TeleOp, `followPath(...)` for Auto. `Robot` holds the `Follower` directly; it is
+  not wrapped in a `Subsystem`.
 - One folder per subsystem. `<Name>.java implements Subsystem`.
 - Hardware handles are **constructor parameters** — `Robot` pulls them from
   `hardwareMap` and passes them in. A subsystem never touches `hardwareMap`.

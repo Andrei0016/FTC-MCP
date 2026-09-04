@@ -15,11 +15,23 @@ Before implementing anything non-trivial:
 Trivial changes (rename, constant tweak, one-line fix) don't need them.
 
 ## The loop
-1. Draft a concrete plan (steps, files, the approach and one alternative).
-2. Run **plan-pro-advocate** and **plan-critic** on that plan.
-3. Reconcile: adjust the plan to neutralize the critic's critical concerns; keep the
-   strengths the advocate identified. If a critical concern can't be resolved, surface
-   it to the user before coding.
-4. Implement.
+1. **Ask the user** anything needed to understand the task before drafting — target
+   hardware, constraints, which alliance/routine, acceptable tradeoffs. Don't guess at
+   requirements that change the design.
+2. **For a serious task** (anything on the trigger list above), **ask the user to confirm
+   the task is understood correctly and outline the intended approach *before* drafting
+   the full plan and running the agents** — cheap to redirect early, expensive after two
+   agents have argued over the wrong plan.
+3. Draft a concrete plan (steps, files, the approach and one alternative).
+4. Run **plan-pro-advocate** and **plan-critic** on that plan.
+5. Reconcile: adjust the plan to neutralize the critic's critical concerns; keep the
+   strengths the advocate identified.
+6. **Present the reconciled plan to the user and get their go-ahead before implementing**
+   — this is required for every serious task, not just when a critical concern remains
+   unresolved.
+7. Implement.
+
+Trivial changes skip straight to implementing — no pre-check, no agents, no plan
+presentation.
 
 Both agents keep project-scoped memory — they get sharper about this robot over time.

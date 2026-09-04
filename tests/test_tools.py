@@ -37,6 +37,12 @@ def test_new_subsystem_registers_and_renders(proj):
     assert "Map is valid." in mapping.update_map(str(proj))
 
 
+@pytest.mark.parametrize("name", ["Drivetrain", "drive", "Chassis", "swerve"])
+def test_new_subsystem_refuses_drivetrain(proj, name):
+    with pytest.raises(ValueError, match="Pedro Follower"):
+        subsystem.new_subsystem(str(proj), name)
+
+
 def test_log_change_prepends(proj):
     changelog.log_change(str(proj), "add lift", "added Lift subsystem",
                          ["subsystems/Lift/Lift.java — new"])

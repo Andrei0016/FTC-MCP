@@ -1,5 +1,9 @@
 # Change workflow — do this for EVERY code change
 
+Before any of this: ask the user whatever you need to understand the task, and for a
+serious task (see `ftc://guide/planning`) confirm your understanding of it and get the
+reconciled plan approved before implementing.
+
 The `map/` directory must always fully describe the project's logic. A teammate (or a
 fresh Claude session) should be able to read `map/MAP.md` and understand the whole
 codebase without opening the Java.

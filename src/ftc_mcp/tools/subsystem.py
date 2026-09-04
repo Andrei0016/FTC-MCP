@@ -9,6 +9,8 @@ from . import mapping
 
 _TMPL_DIR = Path(__file__).parent.parent / "templates" / "subsystem"
 
+_DRIVETRAIN_NAMES = {"drivetrain", "drive", "chassis", "mecanum", "swerve"}
+
 _HW_IMPORTS = {
     "DcMotorEx": "com.qualcomm.robotcore.hardware.DcMotorEx",
     "DcMotor": "com.qualcomm.robotcore.hardware.DcMotor",
@@ -47,6 +49,13 @@ def new_subsystem(
     has_states: bool = False,
     summary: str = "",
 ) -> str:
+    if name.strip().lower() in _DRIVETRAIN_NAMES:
+        raise ValueError(
+            f"Refusing to scaffold '{name}' as a subsystem: driving is owned by the "
+            "Pedro Follower, not a Subsystem. Use follower.setTeleOpDrive(...) / "
+            "follower.followPath(...) directly from Robot — see ftc://guide/architecture."
+        )
+
     name = name[0].upper() + name[1:]
     lname = name[0].lower() + name[1:]
     hw = _parse_hw(hardware or [])
