@@ -40,24 +40,36 @@ opmodes, routines and cross-subsystem data flow. `update_map` validates cross-re
 and regenerates the Mermaid diagrams + `MAP.md` so a reader understands the project from
 the map alone. After **every** code change: edit the YAML → `update_map` → `log_change`.
 
-## Install
+## Install from GitHub
 
-### Straight from GitHub (recommended)
+No clone and no manual virtualenv — `uvx` fetches the repo, builds the package and runs
+the `ftc-mcp` command in one step.
 
-Needs [`uv`](https://docs.astral.sh/uv/) on PATH (`curl -LsSf https://astral.sh/uv/install.sh | sh`).
-No clone, no manual venv — `uvx` fetches, builds and runs it:
+### 1. Install `uv`
+
+`uvx` ships with [`uv`](https://docs.astral.sh/uv/):
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh      # macOS / Linux
+# Windows (PowerShell):
+#   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Open a new shell afterwards so `uvx` is on `PATH` (check with `uvx --version`).
+
+### 2. Register the server
+
+**Claude Code** — one command:
 
 ```bash
 claude mcp add ftc -- uvx --from git+https://github.com/Andrei0016/FTC-MCP ftc-mcp
 ```
 
-Pin a tag/branch/commit with `@`:
+Add `-s user` to make it available in every project instead of just the current one.
 
-```bash
-claude mcp add ftc -- uvx --from git+https://github.com/Andrei0016/FTC-MCP@v0.1.0 ftc-mcp
-```
-
-Claude Desktop (`claude_desktop_config.json`):
+**Claude Desktop** — add to `claude_desktop_config.json`
+(`~/Library/Application Support/Claude/` on macOS,
+`%APPDATA%\Claude\` on Windows), then restart the app:
 
 ```json
 {
@@ -70,11 +82,44 @@ Claude Desktop (`claude_desktop_config.json`):
 }
 ```
 
-`uvx` caches the build; force a refresh after pushing changes with `uvx --refresh --from git+... ftc-mcp` (or bump the tag).
+### 3. Verify
 
-No `uv`? `pipx install git+https://github.com/Andrei0016/FTC-MCP` then use `ftc-mcp` as the command.
+In a Claude Code session run `/mcp` — `ftc` should list as connected with its tools,
+resources and prompts. Or ask Claude to read `ftc://guide/architecture`.
 
-### From a local checkout (for developing the server)
+### Pinning a version
+
+Append `@<tag|branch|commit>` to the git URL:
+
+```bash
+claude mcp add ftc -- uvx --from git+https://github.com/Andrei0016/FTC-MCP@v0.1.0 ftc-mcp
+```
+
+### Updating
+
+`uvx` caches the build per revision. After new commits are pushed to the same
+branch, force a rebuild once:
+
+```bash
+uvx --refresh --from git+https://github.com/Andrei0016/FTC-MCP ftc-mcp
+```
+
+Subsequent runs use the refreshed cache. Bumping a pinned tag also picks up changes.
+
+### Removing
+
+```bash
+claude mcp remove ftc
+```
+
+### No `uv`?
+
+```bash
+pipx install git+https://github.com/Andrei0016/FTC-MCP
+claude mcp add ftc -- ftc-mcp
+```
+
+## From a local checkout (for developing the server)
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -e .
